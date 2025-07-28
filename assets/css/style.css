@@ -2264,6 +2264,11 @@ article:hover {
 /* Enhanced avatar with AI glow */
 .avatar-box {
   position: relative;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
 }
 
 .avatar-box::before {
@@ -2285,7 +2290,11 @@ article:hover {
 }
 
 .avatar-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   border: 3px solid rgba(0, 212, 255, 0.4);
+  border-radius: 50%;
   transition: all var(--transition-2);
 }
 
@@ -2602,4 +2611,207 @@ article:hover {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--ai-gradient-2);
+}
+
+/* Enhanced contact info styling */
+.contact-link,
+.contact-info span,
+.contact-info address {
+  color: var(--ai-neon-blue) !important;
+  transition: all var(--transition-1);
+}
+
+.contact-link:hover {
+  color: var(--ai-primary) !important;
+  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+}
+
+.contact-title {
+  color: var(--ai-cyber-pink) !important;
+  font-weight: var(--fw-500);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.contact-item .icon-box {
+  background: var(--ai-gradient-2);
+  box-shadow: var(--ai-glow-3);
+}
+
+.contact-item:hover .icon-box {
+  transform: scale(1.1);
+  box-shadow: var(--ai-glow-1);
+}
+
+/* AI Knowledge Graph Styling */
+.ai-knowledge-graph {
+  margin-top: 50px;
+  padding: 30px 0;
+}
+
+.ai-knowledge-graph .section-title {
+  color: var(--ai-primary);
+  text-align: center;
+  margin-bottom: 30px;
+  background: var(--ai-gradient-1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.graph-container {
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(0, 212, 255, 0.3);
+  box-shadow: 0 0 30px rgba(0, 212, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.ai-graph {
+  width: 100%;
+  height: auto;
+  max-height: 500px;
+}
+
+/* SVG Node Animations */
+.pulse-node {
+  animation: pulse-scale 3s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-scale {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.1); }
+}
+
+.area-node {
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.area-node:hover {
+  transform: scale(1.2);
+}
+
+.small-node {
+  animation: float-small 4s ease-in-out infinite alternate;
+}
+
+@keyframes float-small {
+  0% { transform: translateY(0px); }
+  100% { transform: translateY(-5px); }
+}
+
+.connection-line {
+  stroke-dasharray: 5,5;
+  animation: dash-flow 2s linear infinite;
+}
+
+@keyframes dash-flow {
+  0% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: 10; }
+}
+
+.particle {
+  opacity: 0.8;
+}
+
+.node-text {
+  font-family: var(--ff-poppins);
+  font-size: 12px;
+  font-weight: var(--fw-500);
+  pointer-events: none;
+}
+
+.central-text {
+  font-size: 16px;
+  font-weight: var(--fw-600);
+}
+
+.small-text {
+  font-size: 10px;
+}
+
+/* Graph Legend */
+.graph-legend {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-1);
+}
+
+.legend-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.legend-color {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px currentColor;
+}
+
+.legend-item span {
+  color: var(--white-2);
+  font-size: var(--fs-7);
+  font-weight: var(--fw-400);
+}
+
+/* Responsive adjustments for graph */
+@media (max-width: 768px) {
+  .ai-knowledge-graph {
+    margin-top: 30px;
+    padding: 20px 0;
+  }
+  
+  .graph-container {
+    padding: 15px;
+  }
+  
+  .ai-graph {
+    max-height: 400px;
+  }
+  
+  .graph-legend {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  
+  .legend-item {
+    padding: 8px;
+  }
+  
+  .node-text {
+    font-size: 10px;
+  }
+  
+  .central-text {
+    font-size: 14px;
+  }
+  
+  .small-text {
+    font-size: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ai-graph {
+    max-height: 300px;
+  }
+  
+  .graph-container {
+    padding: 10px;
+  }
 }
