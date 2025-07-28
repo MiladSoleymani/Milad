@@ -143,7 +143,7 @@ const pages = document.querySelectorAll("[data-page]");
 // add event to all nav link
 for (let i = 0; i < navigationLinks.length; i++) {
   navigationLinks[i].addEventListener("click", function () {
-    const clickedNavText = this.innerHTML.toLowerCase();
+    const clickedNavText = this.innerHTML.toLowerCase().trim();
 
     // Remove active class from all navigation links and pages
     for (let j = 0; j < navigationLinks.length; j++) {
@@ -491,52 +491,6 @@ function initParticleSystem() {
   animate();
 }
 
-// AI Graph Interactive Features
-function initAIGraphInteractions() {
-  const researchNodes = document.querySelectorAll('.research-node');
-  const techniqueNodes = document.querySelectorAll('.technique-node');
-  
-  // Add hover effects to research nodes
-  researchNodes.forEach(node => {
-    const circle = node.querySelector('.area-node');
-    const text = node.querySelector('.node-text');
-    
-    node.addEventListener('mouseenter', () => {
-      // Highlight connected lines
-      const area = node.dataset.area;
-      const connections = node.querySelectorAll('.connection-line');
-      connections.forEach(line => {
-        line.style.strokeWidth = '4';
-        line.style.filter = 'drop-shadow(0 0 5px currentColor)';
-      });
-      
-      // Show tooltip-like effect
-      text.style.fontSize = '14px';
-      text.style.fontWeight = '600';
-    });
-    
-    node.addEventListener('mouseleave', () => {
-      const connections = node.querySelectorAll('.connection-line');
-      connections.forEach(line => {
-        line.style.strokeWidth = '2';
-        line.style.filter = 'none';
-      });
-      
-      text.style.fontSize = '12px';
-      text.style.fontWeight = '500';
-    });
-  });
-  
-  // Add click interactions
-  researchNodes.forEach(node => {
-    node.addEventListener('click', () => {
-      const area = node.dataset.area;
-      // Could add more interactive features here
-      console.log(`Clicked on research area: ${area}`);
-    });
-  });
-}
-
 // Initialize all AI enhancements when DOM is loaded
 document.addEventListener('DOMContentLoaded', () => {
   // Add a small delay to ensure all elements are rendered
@@ -550,7 +504,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initGlitchEffect();
     initMatrixRain();
     initParticleSystem();
-    initAIGraphInteractions();
   }, 500);
 });
 
