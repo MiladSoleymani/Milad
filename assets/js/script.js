@@ -157,3 +157,356 @@ for (let i = 0; i < navigationLinks.length; i++) {
 
   });
 }
+
+
+// AI-THEMED ENHANCEMENTS
+// =======================
+
+// Dynamic gradient background animation
+function initDynamicBackground() {
+  const body = document.body;
+  let angle = 0;
+  
+  setInterval(() => {
+    angle += 0.5;
+    const hue1 = (angle * 2) % 360;
+    const hue2 = (angle * 2 + 120) % 360;
+    const hue3 = (angle * 2 + 240) % 360;
+    
+    body.style.background = `
+      radial-gradient(circle at 20% 80%, hsla(${hue1}, 100%, 50%, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 80% 20%, hsla(${hue2}, 100%, 50%, 0.05) 0%, transparent 50%),
+      radial-gradient(circle at 40% 40%, hsla(${hue3}, 100%, 50%, 0.03) 0%, transparent 50%),
+      var(--smoky-black)
+    `;
+  }, 100);
+}
+
+// Add typing effect to the name
+function initTypingEffect() {
+  const nameElement = document.querySelector('.name');
+  if (!nameElement) return;
+  
+  const originalText = nameElement.textContent;
+  nameElement.textContent = '';
+  
+  let i = 0;
+  const typeInterval = setInterval(() => {
+    if (i < originalText.length) {
+      nameElement.textContent += originalText.charAt(i);
+      i++;
+    } else {
+      clearInterval(typeInterval);
+      // Start the gradient animation after typing is complete
+      nameElement.style.animation = 'gradient-shift 3s ease-in-out infinite alternate';
+    }
+  }, 100);
+}
+
+// Add fade-in animation to elements as they come into view
+function initScrollAnimations() {
+  const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+  };
+  
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('fade-in');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, observerOptions);
+  
+  // Observe all major elements
+  const elementsToAnimate = document.querySelectorAll(
+    '.project-item, .blog-post-item, .timeline-item, .skills-item, .service-item'
+  );
+  
+  elementsToAnimate.forEach(el => {
+    observer.observe(el);
+  });
+}
+
+// Enhanced cursor trail effect
+function initCursorTrail() {
+  const trail = [];
+  const trailLength = 10;
+  
+  // Create trail elements
+  for (let i = 0; i < trailLength; i++) {
+    const dot = document.createElement('div');
+    dot.className = 'cursor-trail';
+    dot.style.cssText = `
+      position: fixed;
+      width: ${8 - i * 0.5}px;
+      height: ${8 - i * 0.5}px;
+      background: radial-gradient(circle, rgba(0, 212, 255, ${1 - i * 0.1}) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 9999;
+      mix-blend-mode: screen;
+      transition: all 0.1s ease-out;
+    `;
+    document.body.appendChild(dot);
+    trail.push(dot);
+  }
+  
+  document.addEventListener('mousemove', (e) => {
+    trail.forEach((dot, index) => {
+      setTimeout(() => {
+        dot.style.left = e.clientX + 'px';
+        dot.style.top = e.clientY + 'px';
+      }, index * 10);
+    });
+  });
+}
+
+// Floating elements animation
+function initFloatingElements() {
+  const floatingElements = document.querySelectorAll('.project-item, .blog-post-item');
+  
+  floatingElements.forEach((el, index) => {
+    const delay = index * 0.2;
+    const duration = 3 + Math.random() * 2;
+    
+    el.style.animation = `float-gentle ${duration}s ease-in-out ${delay}s infinite alternate`;
+  });
+  
+  // Add CSS for floating animation if not exists
+  if (!document.querySelector('#floating-keyframes')) {
+    const style = document.createElement('style');
+    style.id = 'floating-keyframes';
+    style.textContent = `
+      @keyframes float-gentle {
+        0% { transform: translateY(0px) rotate(0deg); }
+        100% { transform: translateY(-10px) rotate(1deg); }
+      }
+    `;
+    document.head.appendChild(style);
+  }
+}
+
+// Interactive skill bars
+function initInteractiveSkillBars() {
+  const skillItems = document.querySelectorAll('.skills-item');
+  
+  skillItems.forEach(item => {
+    const progressBar = item.querySelector('.skill-progress-fill');
+    if (!progressBar) return;
+    
+    const percentage = progressBar.style.width;
+    progressBar.style.width = '0%';
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            progressBar.style.width = percentage;
+            progressBar.style.transition = 'width 2s ease-out';
+          }, 200);
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+    
+    observer.observe(item);
+  });
+}
+
+// Add glitch effect to name on hover
+function initGlitchEffect() {
+  const nameElement = document.querySelector('.name');
+  if (!nameElement) return;
+  
+  const originalText = nameElement.textContent;
+  const glitchChars = '!@#$%^&*()_+-=[]{}|;:,.<>?';
+  
+  nameElement.addEventListener('mouseenter', () => {
+    let iterations = 0;
+    const maxIterations = 10;
+    
+    const glitchInterval = setInterval(() => {
+      nameElement.textContent = originalText
+        .split('')
+        .map((char, index) => {
+          if (index < iterations || char === ' ') {
+            return originalText[index];
+          }
+          return glitchChars[Math.floor(Math.random() * glitchChars.length)];
+        })
+        .join('');
+      
+      iterations++;
+      
+      if (iterations > maxIterations) {
+        clearInterval(glitchInterval);
+        nameElement.textContent = originalText;
+      }
+    }, 50);
+  });
+}
+
+// Matrix-style rain effect (subtle)
+function initMatrixRain() {
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  canvas.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.05;
+  `;
+  
+  document.body.appendChild(canvas);
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  
+  const matrix = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789@#$%^&*()*&^%+-/~{[|`]}";
+  const drops = [];
+  const fontSize = 10;
+  const columns = canvas.width / fontSize;
+  
+  for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+  }
+  
+  function draw() {
+    ctx.fillStyle = 'rgba(0, 0, 0, 0.04)';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    
+    ctx.fillStyle = '#00d4ff';
+    ctx.font = fontSize + 'px monospace';
+    
+    for (let i = 0; i < drops.length; i++) {
+      const text = matrix[Math.floor(Math.random() * matrix.length)];
+      ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+      
+      if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[i] = 0;
+      }
+      drops[i]++;
+    }
+  }
+  
+  setInterval(draw, 100);
+}
+
+// Enhanced particle system
+function initParticleSystem() {
+  const particles = [];
+  const numParticles = 50;
+  
+  for (let i = 0; i < numParticles; i++) {
+    particles.push({
+      x: Math.random() * window.innerWidth,
+      y: Math.random() * window.innerHeight,
+      vx: (Math.random() - 0.5) * 0.5,
+      vy: (Math.random() - 0.5) * 0.5,
+      size: Math.random() * 2 + 1,
+      opacity: Math.random() * 0.5 + 0.1
+    });
+  }
+  
+  const canvas = document.createElement('canvas');
+  const ctx = canvas.getContext('2d');
+  
+  canvas.style.cssText = `
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -2;
+  `;
+  
+  document.body.appendChild(canvas);
+  
+  function resizeCanvas() {
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+  }
+  
+  resizeCanvas();
+  window.addEventListener('resize', resizeCanvas);
+  
+  function animate() {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+    
+    particles.forEach((particle, index) => {
+      particle.x += particle.vx;
+      particle.y += particle.vy;
+      
+      if (particle.x < 0 || particle.x > canvas.width) particle.vx *= -1;
+      if (particle.y < 0 || particle.y > canvas.height) particle.vy *= -1;
+      
+      // Draw particle
+      ctx.beginPath();
+      ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(0, 212, 255, ${particle.opacity})`;
+      ctx.fill();
+      
+      // Connect nearby particles
+      particles.slice(index + 1).forEach(otherParticle => {
+        const dx = particle.x - otherParticle.x;
+        const dy = particle.y - otherParticle.y;
+        const distance = Math.sqrt(dx * dx + dy * dy);
+        
+        if (distance < 100) {
+          ctx.beginPath();
+          ctx.moveTo(particle.x, particle.y);
+          ctx.lineTo(otherParticle.x, otherParticle.y);
+          ctx.strokeStyle = `rgba(0, 212, 255, ${0.1 * (1 - distance / 100)})`;
+          ctx.stroke();
+        }
+      });
+    });
+    
+    requestAnimationFrame(animate);
+  }
+  
+  animate();
+}
+
+// Initialize all AI enhancements when DOM is loaded
+document.addEventListener('DOMContentLoaded', () => {
+  // Add a small delay to ensure all elements are rendered
+  setTimeout(() => {
+    initDynamicBackground();
+    initTypingEffect();
+    initScrollAnimations();
+    initCursorTrail();
+    initFloatingElements();
+    initInteractiveSkillBars();
+    initGlitchEffect();
+    initMatrixRain();
+    initParticleSystem();
+  }, 500);
+});
+
+// Add smooth scrolling behavior
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
