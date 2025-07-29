@@ -20,6 +20,12 @@
   /**
    * colors
    */
+  
+  /* AI theme colors */
+  --ai-primary: #00d4ff;
+  --ai-secondary: #ff006e;
+  --ai-tertiary: #ffb700;
+  --ai-glow: rgba(0, 212, 255, 0.8);
 
   /* gradient */
 
@@ -498,12 +504,21 @@ main {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: hsla(240, 1%, 17%, 0.75);
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--jet);
+  background: linear-gradient(to right, 
+    hsla(240, 1%, 17%, 0.95), 
+    hsla(240, 1%, 17%, 0.85),
+    hsla(240, 1%, 17%, 0.95));
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(0, 212, 255, 0.2);
   border-radius: 12px 12px 0 0;
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 -5px 30px rgba(0, 212, 255, 0.15), var(--shadow-2);
   z-index: 5;
+  animation: navbar-glow 4s ease-in-out infinite;
+}
+
+@keyframes navbar-glow {
+  0%, 100% { box-shadow: 0 -5px 30px rgba(0, 212, 255, 0.15), var(--shadow-2); }
+  50% { box-shadow: 0 -5px 40px rgba(0, 212, 255, 0.25), var(--shadow-2); }
 }
 
 .navbar-list {
@@ -515,10 +530,14 @@ main {
 }
 
 .navbar-link {
-  color: var(--light-gray);
+  color: var(--white-2);
   font-size: var(--fs-8);
-  padding: 20px 7px;
-  transition: color var(--transition-1);
+  padding: 20px 10px;
+  transition: all var(--transition-1);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: var(--fw-500);
+  position: relative;
 }
 
 .navbar-link:hover,
@@ -2333,28 +2352,44 @@ article:hover {
 .navbar-link {
   position: relative;
   transition: all var(--transition-1);
+  font-weight: var(--fw-500);
+  letter-spacing: 0.5px;
 }
 
 .navbar-link::before {
   content: '';
   position: absolute;
-  bottom: -2px;
-  left: 0;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
   width: 0;
-  height: 2px;
-  background: var(--ai-gradient-1);
+  height: 3px;
+  background: linear-gradient(90deg, var(--ai-primary), var(--ai-secondary));
+  border-radius: 2px;
   transition: width var(--transition-1);
+  box-shadow: 0 0 10px var(--ai-glow);
 }
 
 .navbar-link:hover::before,
 .navbar-link.active::before {
-  width: 100%;
+  width: 80%;
 }
 
 .navbar-link:hover,
 .navbar-link.active {
   color: var(--ai-primary);
-  text-shadow: 0 0 8px rgba(0, 212, 255, 0.6);
+  text-shadow: 0 0 12px var(--ai-glow);
+  transform: translateY(-2px);
+}
+
+/* Add pulsing effect to active nav item */
+.navbar-link.active {
+  animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+  0%, 100% { text-shadow: 0 0 12px var(--ai-glow); }
+  50% { text-shadow: 0 0 20px var(--ai-glow), 0 0 30px var(--ai-glow); }
 }
 
 /* Enhanced project cards */
