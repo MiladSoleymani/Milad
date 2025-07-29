@@ -919,17 +919,7 @@ main {
   background: var(--jet);
 }
 
-.timeline-item::after {
-  content: "";
-  position: absolute;
-  top: 5px;
-  left: -33px;
-  height: 6px;
-  width: 6px;
-  background: var(--text-gradient-ai);
-  border-radius: 50%;
-  box-shadow: 0 0 0 4px var(--jet);
-}
+/* Removed timeline-item::after to eliminate circles */
 
 .timeline-text {
   color: var(--light-gray);
@@ -1710,11 +1700,7 @@ textarea.form-input::-webkit-resizer {
     left: -40px;
   }
 
-  .timeline-item::after {
-    height: 8px;
-    width: 8px;
-    left: -43px;
-  }
+  /* Removed timeline-item::after media query override */
 
   .skills-item:not(:last-child) {
     margin-bottom: 25px;
