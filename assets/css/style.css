@@ -2394,6 +2394,43 @@ article:hover {
   50% { text-shadow: 0 0 20px var(--ai-glow), 0 0 30px var(--ai-glow); }
 }
 
+/* Enhanced timeline items */
+.timeline-item {
+  position: relative;
+  transition: all var(--transition-1);
+  cursor: pointer;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -25px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  background: var(--ai-primary);
+  border-radius: 50%;
+  box-shadow: 0 0 20px var(--ai-glow);
+  transition: all var(--transition-1);
+}
+
+.timeline-item:hover {
+  transform: translateX(10px);
+}
+
+.timeline-item:hover::before {
+  width: 15px;
+  height: 15px;
+  left: -27.5px;
+  top: 2.5px;
+  box-shadow: 0 0 30px var(--ai-glow), 0 0 50px var(--ai-glow);
+}
+
+.timeline-item:hover .h4 {
+  color: var(--ai-primary);
+  text-shadow: 0 0 10px var(--ai-glow);
+}
+
 /* Enhanced project cards */
 .project-item {
   transition: all var(--transition-2);
