@@ -2406,30 +2406,8 @@ article:hover {
   display: none !important;
 }
 
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -25px;
-  top: 5px;
-  width: 10px;
-  height: 10px;
-  background: var(--ai-primary);
-  border-radius: 50%;
-  box-shadow: 0 0 20px var(--ai-glow);
-  transition: all var(--transition-1);
-  z-index: 2;
-}
-
 .timeline-item:hover {
   transform: translateX(10px);
-}
-
-.timeline-item:hover::before {
-  width: 15px;
-  height: 15px;
-  left: -27.5px;
-  top: 2.5px;
-  box-shadow: 0 0 30px var(--ai-glow), 0 0 50px var(--ai-glow);
 }
 
 .timeline-item:hover .h4 {
