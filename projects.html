@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Milad Soleymani</title>
+  <meta name="description" content="Research projects by Milad Soleymani in AI, machine learning, EEG processing, and computer vision.">
+  <meta name="keywords" content="AI projects, machine learning, EEG, BCI, computer vision, medical AI">
+  <meta name="author" content="Milad Soleymani">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile_pic.png" alt="Milad Soleymani" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Milad Soleymani">Milad Soleymani</h1>
+
+          <p class="title">AI/ML Researcher</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:miladsoleiimani@gmail.com" class="contact-link">miladsoleiimani@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <span class="contact-link">Available upon request</span>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Education</p>
+
+              <span>M.Sc. AI & Robotics</span>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Tehran, Iran</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/miladsoleymani" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://linkedin.com/in/miladsoleymani" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="resume.html" class="navbar-link">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="projects.html" class="navbar-link active">Projects</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="publications.html" class="navbar-link">Publications</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #PORTFOLIO
+      -->
+
+      <article class="portfolio active" data-page="projects">
+
+        <header>
+          <h2 class="h2 article-title">Research Projects</h2>
+        </header>
+
+        <section class="projects">
+
+          <ul class="filter-list">
+
+            <li class="filter-item">
+              <button class="active" data-filter-btn>All</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>EEG & BCI</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Medical AI</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Computer Vision</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>NLP</button>
+            </li>
+
+          </ul>
+
+          <div class="filter-select-box">
+
+            <button class="filter-select" data-select>
+
+              <div class="select-value" data-selecct-value>Select category</div>
+
+              <div class="select-icon">
+                <ion-icon name="chevron-down"></ion-icon>
+              </div>
+
+            </button>
+
+            <ul class="select-list">
+
+              <li class="select-item">
+                <button data-select-item>All</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>EEG & BCI</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Medical AI</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Computer Vision</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>NLP</button>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <ul class="project-list">
+
+            <li class="project-item active" data-filter-item data-category="computer vision">
+              <a href="https://github.com/miladsoleymani/Vidsegtool" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-1.jpg" alt="Vidsegtool" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Vidsegtool</h3>
+
+                <p class="project-category">Computer Vision</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="eeg & bci">
+              <a href="https://github.com/miladsoleymani/Self-supervised-EEG-Embedding" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-2.png" alt="EEG Embedding" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Self-supervised EEG Embedding</h3>
+
+                <p class="project-category">EEG & BCI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="nlp">
+              <a href="https://github.com/miladsoleymani/Persian-Text-Classification" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-3.jpg" alt="Persian Text Classification" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Persian Text Classification</h3>
+
+                <p class="project-category">NLP</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="nlp">
+              <a href="https://github.com/miladsoleymani/PDF-QA-using-LLM" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-4.png" alt="PDF QA" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">PDF-QA using LLM</h3>
+
+                <p class="project-category">NLP</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="medical ai">
+              <a href="https://github.com/miladsoleymani/Tumor-Classification" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-5.png" alt="Tumor Classification" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Tumor Classification</h3>
+
+                <p class="project-category">Medical AI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="medical ai">
+              <a href="https://github.com/miladsoleymani/Skin-Cancer-Detection" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-6.png" alt="Skin Cancer Detection" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Skin Cancer Detection</h3>
+
+                <p class="project-category">Medical AI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="computer vision">
+              <a href="https://github.com/miladsoleymani/Face-Demography" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-7.png" alt="Face Demography" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Face Demography</h3>
+
+                <p class="project-category">Computer Vision</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="eeg & bci">
+              <a href="https://github.com/miladsoleymani/EEG-LTENT" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-8.jpg" alt="EEG-LTENT" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">EEG-LTENT</h3>
+
+                <p class="project-category">EEG & BCI</p>
+
+              </a>
+            </li>
+
+            <li class="project-item active" data-filter-item data-category="eeg & bci">
+              <a href="https://github.com/miladsoleymani/Baseline-Models-EEG" target="_blank">
+
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+
+                  <img src="./assets/images/project-9.png" alt="Baseline Models EEG" loading="lazy">
+                </figure>
+
+                <h3 class="project-title">Baseline Models EEG</h3>
+
+                <p class="project-category">EEG & BCI</p>
+
+              </a>
+            </li>
+
+          </ul>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
