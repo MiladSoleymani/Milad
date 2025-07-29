@@ -909,7 +909,7 @@ main {
   line-height: 1.6;
 }
 
-.timeline-item:not(:last-child)::before {
+.timeline-list > .timeline-item:not(:last-child)::before {
   content: "";
   position: absolute;
   top: -25px;
@@ -2401,6 +2401,11 @@ article:hover {
   cursor: pointer;
 }
 
+/* Remove the vertical line for last items in each timeline section */
+.timeline-list > .timeline-item:last-child::before {
+  display: none !important;
+}
+
 .timeline-item::before {
   content: '';
   position: absolute;
@@ -2412,6 +2417,7 @@ article:hover {
   border-radius: 50%;
   box-shadow: 0 0 20px var(--ai-glow);
   transition: all var(--transition-1);
+  z-index: 2;
 }
 
 .timeline-item:hover {
@@ -2507,32 +2513,6 @@ article:hover {
   100% { left: 100%; }
 }
 
-/* Enhanced timeline items */
-.timeline-item {
-  position: relative;
-  transition: all var(--transition-1);
-}
-
-.timeline-item::before {
-  content: '';
-  position: absolute;
-  left: -20px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: var(--ai-gradient-1);
-  opacity: 0;
-  transition: opacity var(--transition-1);
-}
-
-.timeline-item:hover::before {
-  opacity: 1;
-}
-
-.timeline-item:hover {
-  transform: translateX(10px);
-  padding-left: 20px;
-}
 
 /* Enhanced contact form */
 .form-input {
