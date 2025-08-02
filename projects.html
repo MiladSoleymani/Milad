@@ -6,7 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Milad Soleymani</title>
-  <meta name="description" content="Research projects by Milad Soleymani in AI, machine learning, EEG processing, and computer vision.">
+  <meta name="description"
+    content="Research projects by Milad Soleymani in AI, machine learning, EEG processing, and computer vision.">
   <meta name="keywords" content="AI projects, machine learning, EEG, BCI, computer vision, medical AI">
   <meta name="author" content="Milad Soleymani">
 
@@ -211,19 +212,15 @@
             </li>
 
             <li class="filter-item">
-              <button data-filter-btn>EEG & BCI</button>
-            </li>
-
-            <li class="filter-item">
-              <button data-filter-btn>Medical AI</button>
-            </li>
-
-            <li class="filter-item">
               <button data-filter-btn>Computer Vision</button>
             </li>
 
             <li class="filter-item">
               <button data-filter-btn>NLP</button>
+            </li>
+
+            <li class="filter-item">
+              <button data-filter-btn>Signal Processing</button>
             </li>
 
           </ul>
@@ -247,19 +244,15 @@
               </li>
 
               <li class="select-item">
-                <button data-select-item>EEG & BCI</button>
-              </li>
-
-              <li class="select-item">
-                <button data-select-item>Medical AI</button>
-              </li>
-
-              <li class="select-item">
                 <button data-select-item>Computer Vision</button>
               </li>
 
               <li class="select-item">
                 <button data-select-item>NLP</button>
+              </li>
+
+              <li class="select-item">
+                <button data-select-item>Signal Processing</button>
               </li>
 
             </ul>
@@ -274,30 +267,31 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-1.jpg" alt="Vidsegtool" loading="lazy">
+                  <img src="./assets/images/icon-computer-vision.svg" alt="Computer Vision" loading="lazy">
                 </figure>
 
                 <div class="project-details">
-                  <h3 class="project-title">Vidsegtool - Video Segmentation Tool</h3>
+                  <h3 class="project-title">Video Segmentation Tool</h3>
                   <p class="project-category">Computer Vision</p>
-                  
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> A comprehensive video segmentation tool designed for efficient video processing and analysis using state-of-the-art computer vision techniques.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, OpenCV, PyTorch, NumPy, FFmpeg</p>
-                    
+                    <p><strong>Overview:</strong> A semi-automatic video segmentation tool that accelerates the preparation of image segmentation data for video sequences using GUI-based annotation and AI propagation.</p>
+
+                    <p><strong>Technologies:</strong> Python, PyQt6, PyTorch, OpenCV, OSVOS (One-Shot Video Object Segmentation)</p>
+
                     <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Automated video segmentation with multiple algorithms</li>
-                      <li>• Support for various video formats and resolutions</li>
-                      <li>• Real-time processing capabilities</li>
-                      <li>• Batch processing for multiple videos</li>
+                      <li>• Manual annotation tools (pencil, polygon)</li>
+                      <li>• Semi-automatic label propagation using Optical Flow and OSVOS</li>
+                      <li>• Frame-by-frame navigation with multi-label support</li>
+                      <li>• MVC architecture for scalable design</li>
                     </ul>
-                    
-                    <p><strong>Impact:</strong> Enables researchers and developers to efficiently process video data for computer vision applications, reducing processing time by up to 60%.</p>
-                    
+
+                    <p><strong>Impact:</strong> Combines manual annotation capabilities with automated segmentation algorithms to significantly reduce manual labeling effort for video datasets.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Vidsegtool" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/video_segmentation_tool" target="_blank"
+                        class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
@@ -306,36 +300,37 @@
               </div>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="eeg & bci">
+            <li class="project-item active" data-filter-item data-category="signal processing">
               <div class="project-content">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-2.png" alt="EEG Embedding" loading="lazy">
+                  <img src="./assets/images/icon-signal-processing.svg" alt="Signal Processing" loading="lazy">
                 </figure>
 
                 <div class="project-details">
                   <h3 class="project-title">Self-supervised EEG Embedding</h3>
-                  <p class="project-category">EEG & BCI</p>
-                  
+                  <p class="project-category">Signal Processing</p>
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> Novel self-supervised learning approach for extracting meaningful representations from EEG signals without labeled data, advancing brain-computer interface applications.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, TensorFlow, PyTorch, MNE-Python, Scikit-learn, Signal Processing Libraries</p>
-                    
-                    <p><strong>Methodology:</strong></p>
+                    <p><strong>Overview:</strong> Learn meaningful EEG representations without labeled data across multiple tasks and datasets using self-supervised learning techniques.</p>
+
+                    <p><strong>Technologies:</strong> PyTorch Lightning, Python, Neural Networks, EEG Signal Processing</p>
+
+                    <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Developed contrastive learning framework for EEG data</li>
-                      <li>• Implemented temporal and spatial augmentation strategies</li>
-                      <li>• Designed custom neural network architectures for EEG processing</li>
-                      <li>• Validated on multiple EEG datasets (motor imagery, emotion recognition)</li>
+                      <li>• Self-supervised learning framework for EEG</li>
+                      <li>• Task-agnostic embeddings for multiple datasets</li>
+                      <li>• Modular neural architecture with "Minion Networks"</li>
+                      <li>• Cross-validation support for robust evaluation</li>
                     </ul>
-                    
-                    <p><strong>Results:</strong> Achieved 15% improvement in downstream task performance compared to supervised baselines, demonstrating the effectiveness of self-supervised learning for EEG analysis.</p>
-                    
+
+                    <p><strong>Impact:</strong> Creates transferable embeddings across different neurological signal analysis tasks using auxiliary tasks like temporal context prediction and channel reconstruction.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Self-supervised-EEG-Embedding" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/Self-supervised-Task-agnostic-EEG-Embedding"
+                        target="_blank" class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
@@ -350,30 +345,31 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-3.jpg" alt="Persian Text Classification" loading="lazy">
+                  <img src="./assets/images/icon-nlp.svg" alt="NLP" loading="lazy">
                 </figure>
 
                 <div class="project-details">
-                  <h3 class="project-title">Persian Text Classification</h3>
+                  <h3 class="project-title">Persian Text Classification using GloVe</h3>
                   <p class="project-category">NLP</p>
-                  
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> Advanced NLP system for classifying Persian text documents using state-of-the-art transformer models and traditional ML approaches.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, Transformers (BERT), TensorFlow, Hazm (Persian NLP), Scikit-learn</p>
-                    
-                    <p><strong>Key Achievements:</strong></p>
+                    <p><strong>Overview:</strong> Classify ten classes of Persian text datasets using GloVe embedding to address unique challenges of Persian language processing in multi-class classification.</p>
+
+                    <p><strong>Technologies:</strong> Python, Jupyter Notebook, GloVe Embedding, Machine Learning</p>
+
+                    <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Implemented Persian-specific preprocessing pipeline</li>
-                      <li>• Fine-tuned ParsBERT for Persian text understanding</li>
-                      <li>• Achieved 94% accuracy on news categorization task</li>
-                      <li>• Deployed model for real-time classification</li>
+                      <li>• Multi-class Persian text classification framework</li>
+                      <li>• GloVe word embedding implementation for Persian</li>
+                      <li>• Comprehensive preprocessing pipeline</li>
+                      <li>• Specialized handling of Persian language characteristics</li>
                     </ul>
-                    
-                    <p><strong>Applications:</strong> News categorization, sentiment analysis, content moderation for Persian language platforms.</p>
-                    
+
+                    <p><strong>Applications:</strong> Leverages GloVe embeddings to convert Persian text into numerical representations for effective machine learning classification across ten distinct text categories.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Persian-Text-Classification" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/Persian-text-classification-using-glove-embedding"
+                        target="_blank" class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
@@ -388,106 +384,30 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-4.png" alt="PDF QA" loading="lazy">
+                  <img src="./assets/images/icon-nlp.svg" alt="NLP" loading="lazy">
                 </figure>
 
                 <div class="project-details">
                   <h3 class="project-title">PDF-QA using LLM</h3>
                   <p class="project-category">NLP</p>
-                  
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> Intelligent question-answering system that extracts and processes information from PDF documents using Large Language Models.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, LangChain, OpenAI API, PyPDF2, FAISS, Streamlit</p>
-                    
-                    <p><strong>Features:</strong></p>
-                    <ul>
-                      <li>• Automatic PDF text extraction and chunking</li>
-                      <li>• Vector embedding for semantic search</li>
-                      <li>• Context-aware question answering</li>
-                      <li>• Support for multi-page technical documents</li>
-                    </ul>
-                    
-                    <p><strong>Impact:</strong> Enables efficient information retrieval from large document repositories, reducing research time by 70% for technical documentation.</p>
-                    
-                    <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/PDF-QA-using-LLM" target="_blank" class="project-link">
-                        <ion-icon name="logo-github"></ion-icon> View on GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
+                    <p><strong>Overview:</strong> A Python application that processes PDF documents and extracts structured information using Large Language Models, designed specifically for medical reports.</p>
 
-            <li class="project-item active" data-filter-item data-category="medical ai">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-5.png" alt="Tumor Classification" loading="lazy">
-                </figure>
+                    <p><strong>Technologies:</strong> OpenAI GPT, Meta's LLaMA, Python, PyTorch, Hugging Face Transformers, LangChain</p>
 
-                <div class="project-details">
-                  <h3 class="project-title">Tumor Classification</h3>
-                  <p class="project-category">Medical AI</p>
-                  
-                  <div class="project-description">
-                    <p><strong>Overview:</strong> Deep learning system for automated brain tumor classification from MRI scans, assisting radiologists in early diagnosis.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, PyTorch, Medical Image Processing (SimpleITK), CNN architectures (ResNet, EfficientNet)</p>
-                    
-                    <p><strong>Methodology:</strong></p>
-                    <ul>
-                      <li>• Preprocessed 3000+ MRI scans with data augmentation</li>
-                      <li>• Implemented ensemble of CNN models</li>
-                      <li>• Applied grad-CAM for interpretability</li>
-                      <li>• Cross-validated on multiple medical datasets</li>
-                    </ul>
-                    
-                    <p><strong>Results:</strong> Achieved 96.5% accuracy in distinguishing between tumor types, with high sensitivity (98%) and specificity (95%).</p>
-                    
-                    <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Tumor-Classification" target="_blank" class="project-link">
-                        <ion-icon name="logo-github"></ion-icon> View on GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="medical ai">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-6.png" alt="Skin Cancer Detection" loading="lazy">
-                </figure>
-
-                <div class="project-details">
-                  <h3 class="project-title">Skin Cancer Detection</h3>
-                  <p class="project-category">Medical AI</p>
-                  
-                  <div class="project-description">
-                    <p><strong>Overview:</strong> AI-powered dermatological assistant for early detection of skin cancer using dermoscopy images and deep learning.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, TensorFlow/Keras, Transfer Learning (DenseNet, InceptionV3), OpenCV</p>
-                    
                     <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Multi-class classification (7 skin lesion types)</li>
-                      <li>• Mobile-optimized model deployment</li>
-                      <li>• Real-time inference capabilities</li>
-                      <li>• ISIC dataset integration</li>
+                      <li>• Dual LLM support (GPT and LLaMA)</li>
+                      <li>• Automated PDF content extraction with structured output</li>
+                      <li>• Batch processing capabilities</li>
+                      <li>• Resource usage monitoring</li>
                     </ul>
-                    
-                    <p><strong>Clinical Impact:</strong> Assists dermatologists with 91% accuracy in melanoma detection, potentially enabling earlier intervention and improved patient outcomes.</p>
-                    
+
+                    <p><strong>Impact:</strong> Uses large language models to parse PDF files and extract patient information, test results, and panel summaries with flexible LLM backends and structured CSV/JSON outputs.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Skin-Cancer-Detection" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/PDF-QA-using-LLM" target="_blank" class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
@@ -502,30 +422,70 @@
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-7.png" alt="Face Demography" loading="lazy">
+                  <img src="./assets/images/icon-computer-vision.svg" alt="Computer Vision" loading="lazy">
+                </figure>
+
+                <div class="project-details">
+                  <h3 class="project-title">Tumor Classification Using Machine Learning</h3>
+                  <p class="project-category">Computer Vision</p>
+
+                  <div class="project-description">
+                    <p><strong>Overview:</strong> A comprehensive machine learning project for tumor subtype classification using mutation and copy number variation data from genomic analysis.</p>
+
+                    <p><strong>Technologies:</strong> Python, Scikit-learn, Pandas, NumPy, Jupyter Notebook, Deep Neural Networks</p>
+
+                    <p><strong>Key Features:</strong></p>
+                    <ul>
+                      <li>• Classification of tumor subtypes (PDM vs SCM)</li>
+                      <li>• Multiple ML approaches including SVM, XGBoost, and few-shot learning</li>
+                      <li>• Feature selection and dimensionality reduction techniques</li>
+                      <li>• 5-fold cross-validation evaluation</li>
+                    </ul>
+
+                    <p><strong>Results:</strong> Achieved 69.17% accuracy with Logistic Regression using Tumor Mutation Burden, copy number variations, and missense mutations with metaheuristic optimization for feature selection.</p>
+
+                    <div class="project-links">
+                      <a href="https://github.com/MiladSoleymani/tumur-classification" target="_blank"
+                        class="project-link">
+                        <ion-icon name="logo-github"></ion-icon> View on GitHub
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li class="project-item active" data-filter-item data-category="computer vision">
+              <div class="project-content">
+                <figure class="project-img">
+                  <div class="project-item-icon-box">
+                    <ion-icon name="eye-outline"></ion-icon>
+                  </div>
+                  <img src="./assets/images/icon-computer-vision.svg" alt="Computer Vision" loading="lazy">
                 </figure>
 
                 <div class="project-details">
                   <h3 class="project-title">Face Demography Analysis</h3>
                   <p class="project-category">Computer Vision</p>
-                  
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> Real-time facial analysis system for demographic attribute prediction including age, gender, and ethnicity using deep learning.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, PyTorch, MTCNN, FaceNet, Docker, Flask API</p>
-                    
-                    <p><strong>Technical Highlights:</strong></p>
+                    <p><strong>Overview:</strong> A real-time facial emotion detection system using YOLOv8 for face detection and FER for emotion analysis across 7 categories.</p>
+
+                    <p><strong>Technologies:</strong> Python, YOLOv8, OpenCV, Facial Expression Recognition (FER), ONNX</p>
+
+                    <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Multi-task learning architecture</li>
-                      <li>• Real-time processing (30+ FPS)</li>
-                      <li>• Privacy-preserving design</li>
-                      <li>• REST API for integration</li>
+                      <li>• Real-time emotion recognition across 7 categories</li>
+                      <li>• Multiple input sources (images, videos, webcam)</li>
+                      <li>• Two-stage detection pipeline</li>
+                      <li>• Command-line interface with flexible parameters</li>
                     </ul>
-                    
-                    <p><strong>Applications:</strong> Retail analytics, security systems, demographic studies, and personalized user experiences while maintaining ethical AI principles.</p>
-                    
+
+                    <p><strong>Applications:</strong> Combines YOLOv8 face detection with emotion recognition algorithms for real-time video streams, suitable for demographic analysis and human-computer interaction applications.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Face-Demography" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/Face_Demography" target="_blank" class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
@@ -534,74 +494,38 @@
               </div>
             </li>
 
-            <li class="project-item active" data-filter-item data-category="eeg & bci">
+
+            <li class="project-item active" data-filter-item data-category="signal processing">
               <div class="project-content">
                 <figure class="project-img">
                   <div class="project-item-icon-box">
                     <ion-icon name="eye-outline"></ion-icon>
                   </div>
-                  <img src="./assets/images/project-8.jpg" alt="EEG-LTENT" loading="lazy">
-                </figure>
-
-                <div class="project-details">
-                  <h3 class="project-title">EEG-LTENT: Latent Space Analysis</h3>
-                  <p class="project-category">EEG & BCI</p>
-                  
-                  <div class="project-description">
-                    <p><strong>Overview:</strong> Novel framework for exploring and analyzing the latent space of EEG signals to understand neural representations and improve BCI performance.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, PyTorch, MNE-Python, Variational Autoencoders, t-SNE, UMAP</p>
-                    
-                    <p><strong>Research Contributions:</strong></p>
-                    <ul>
-                      <li>• Developed VAE-based architecture for EEG encoding</li>
-                      <li>• Discovered task-agnostic neural patterns</li>
-                      <li>• Improved cross-subject transfer learning</li>
-                      <li>• Published visualization tools for latent analysis</li>
-                    </ul>
-                    
-                    <p><strong>Impact:</strong> Advances understanding of neural signal structure, enabling better BCI systems with 20% improvement in cross-subject performance.</p>
-                    
-                    <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/EEG-LTENT" target="_blank" class="project-link">
-                        <ion-icon name="logo-github"></ion-icon> View on GitHub
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </li>
-
-            <li class="project-item active" data-filter-item data-category="eeg & bci">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="eye-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/project-9.png" alt="Baseline Models EEG" loading="lazy">
+                  <img src="./assets/images/icon-signal-processing.svg" alt="Signal Processing" loading="lazy">
                 </figure>
 
                 <div class="project-details">
                   <h3 class="project-title">Baseline Models for EEG Analysis</h3>
-                  <p class="project-category">EEG & BCI</p>
-                  
+                  <p class="project-category">Signal Processing</p>
+
                   <div class="project-description">
-                    <p><strong>Overview:</strong> Comprehensive repository of baseline models and benchmarks for EEG signal classification, serving as a reference for the BCI research community.</p>
-                    
-                    <p><strong>Technologies:</strong> Python, Scikit-learn, PyTorch, MNE-Python, Braindecode</p>
-                    
-                    <p><strong>Repository Contents:</strong></p>
+                    <p><strong>Overview:</strong> A comprehensive framework for EEG signal analysis and classification, providing baseline implementations of classical machine learning models for the research community.</p>
+
+                    <p><strong>Technologies:</strong> Python, NumPy, SciPy, scikit-learn, PyTorch, MNE-Python, XGBoost</p>
+
+                    <p><strong>Key Features:</strong></p>
                     <ul>
-                      <li>• Classical ML models (SVM, Random Forest, LDA)</li>
-                      <li>• Deep learning architectures (EEGNet, DeepConvNet)</li>
-                      <li>• Standardized preprocessing pipelines</li>
-                      <li>• Performance benchmarks on 5+ public datasets</li>
+                      <li>• Support for multiple EEG datasets (CHB-MIT, BCI Competition 2a, LEE, Klinik)</li>
+                      <li>• Classical ML models with signal processing techniques</li>
+                      <li>• Modular architecture with cross-validation</li>
+                      <li>• Integration with Weights & Biases for experiment tracking</li>
                     </ul>
-                    
-                    <p><strong>Community Impact:</strong> Used by 50+ researchers as a starting point for EEG analysis, cited in multiple publications for reproducible research.</p>
-                    
+
+                    <p><strong>Impact:</strong> Provides standardized framework for EEG signal processing including epilepsy detection and motor imagery classification with reproducible baseline performance metrics across different datasets.</p>
+
                     <div class="project-links">
-                      <a href="https://github.com/miladsoleymani/Baseline-Models-EEG" target="_blank" class="project-link">
+                      <a href="https://github.com/MiladSoleymani/baseline_models_eeg" target="_blank"
+                        class="project-link">
                         <ion-icon name="logo-github"></ion-icon> View on GitHub
                       </a>
                     </div>
