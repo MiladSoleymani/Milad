@@ -1888,6 +1888,18 @@ textarea.form-input::-webkit-resizer {
 
 
 /**
+ * #PUBLICATIONS CUSTOM STYLES
+ */
+
+[data-page="publications"] .article-title {
+  font-size: var(--fs-2);
+}
+
+
+
+
+
+/**
  * responsive larger than 1024px screen
  */
 
