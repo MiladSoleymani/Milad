@@ -1891,6 +1891,10 @@ textarea.form-input::-webkit-resizer {
  * #PUBLICATIONS CUSTOM STYLES
  */
 
+[data-page="about"] .article-title,
+[data-page="resume"] .article-title,
+[data-page="projects"] .article-title,
+[data-page="contact"] .article-title,
 [data-page="publications"] .article-title {
   font-size: var(--fs-2);
 }
