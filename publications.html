@@ -197,139 +197,81 @@
         - #BLOG
       -->
 
-      <article class="publications active" data-page="publications">
+      <article class="resume active" data-page="publications">
 
         <header>
           <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <section class="projects">
+        <section class="timeline">
 
-          <ul class="project-list">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="document-text-outline"></ion-icon>
+            </div>
 
-            <!-- POC-CSP Neural Network Paper -->
-            <li class="project-item active" data-filter-item data-category="research">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/blog-1.jpg" alt="POC-CSP Neural Network" loading="lazy">
-                </figure>
+            <h3 class="h3">Research Papers</h3>
+          </div>
 
-                <div class="project-details">
-                  <h3 class="project-title">POC-CSP: Parameterised and Orthogonally-Constrained Neural Network</h3>
-                  <p class="project-category">Neural Networks Journal • 2024</p>
+          <ol class="timeline-list">
 
-                  <div class="project-description">
-                    <p><strong>Authors:</strong> Milad Soleymani, Mohammad Ali Ahmadi, Mehdi Ezoji</p>
+            <li class="timeline-item">
 
-                    <p><strong>Abstract:</strong> We propose POC-CSP, a novel neural network layer that learns Common
-                      Spatial Patterns (CSP) with enhanced orthogonality constraints. This approach improves the
-                      discriminative power of spatial filters for EEG-based brain-computer interfaces (BCIs) by
-                      incorporating parameterized constraints directly into the neural architecture.</p>
+              <h4 class="h4 timeline-item-title">POC-CSP: Parameterised and Orthogonally-Constrained Neural Network for Learning Common Spatial Patterns in EEG</h4>
 
-                    <p><strong>Key Contributions:</strong></p>
-                    <ul>
-                      <li>• Novel parameterized orthogonality constraints for CSP learning</li>
-                      <li>• Integration with deep neural architectures</li>
-                      <li>• State-of-the-art performance on multiple BCI datasets</li>
-                      <li>• Maintains interpretability of learned spatial patterns</li>
-                    </ul>
+              <span>2024</span>
 
-                    <div class="project-links">
-                      <a href="#" target="_blank" class="project-link">
-                        <ion-icon name="school-outline"></ion-icon> link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <p class="timeline-text">
+                <strong>Milad Soleymani</strong>, Mohammad Ali Ahmadi, Mehdi Ezoji<br>
+                <em>Submitted to Neural Networks Journal</em><br><br>
+                
+                <strong>Abstract:</strong> We propose POC-CSP, a novel neural network layer that learns Common Spatial Patterns (CSP) with enhanced orthogonality constraints. This approach improves the discriminative power of spatial filters for EEG-based brain-computer interfaces (BCIs) by incorporating parameterized constraints directly into the neural architecture. Our method achieves state-of-the-art performance on multiple BCI datasets while maintaining interpretability of learned spatial patterns.<br><br>
+                
+                <a href="#" target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Paper]</a>
+                <a href="#" target="_blank" style="color: var(--ai-accent-color); text-decoration: none; margin-left: 10px;">[Code]</a>
+                <a href="#" target="_blank" style="color: var(--ai-accent-color); text-decoration: none; margin-left: 10px;">[arXiv]</a>
+              </p>
+
             </li>
 
-            <!-- Self-supervised EEG Embedding Paper -->
-            <li class="project-item active" data-filter-item data-category="research">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/blog-2.jpg" alt="Self-supervised EEG Embedding" loading="lazy">
-                </figure>
+            <li class="timeline-item">
 
-                <div class="project-details">
-                  <h3 class="project-title">A Self-supervised Task-agnostic Embedding for Multi-task EEG Classification
-                  </h3>
-                  <p class="project-category">Under Review • 2024</p>
+              <h4 class="h4 timeline-item-title">A Self-supervised Task-agnostic Embedding for Multi-task EEG Classification</h4>
 
-                  <div class="project-description">
-                    <p><strong>Authors:</strong> Milad Soleymani, Hamed Azami, Ali Motie Nasrabadi</p>
+              <span>2024</span>
 
-                    <p><strong>Abstract:</strong> This paper presents a self-supervised learning framework for creating
-                      universal EEG representations that generalize across different BCI tasks. By leveraging
-                      contrastive learning and temporal consistency, our approach learns task-agnostic features from raw
-                      EEG signals without requiring labeled data.</p>
+              <p class="timeline-text">
+                <strong>Milad Soleymani</strong>, Hamed Azami, Ali Motie Nasrabadi<br>
+                <em>Under Review</em><br><br>
+                
+                <strong>Abstract:</strong> This paper presents a self-supervised learning framework for creating universal EEG representations that generalize across different BCI tasks. By leveraging contrastive learning and temporal consistency, our approach learns task-agnostic features from raw EEG signals without requiring labeled data. The learned embeddings significantly improve downstream task performance across motor imagery, emotion recognition, and cognitive load assessment, demonstrating the potential for transfer learning in BCI applications.<br><br>
+                
+                <a href="#" target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Paper]</a>
+                <a href="#" target="_blank" style="color: var(--ai-accent-color); text-decoration: none; margin-left: 10px;">[Code]</a>
+              </p>
 
-                    <p><strong>Key Contributions:</strong></p>
-                    <ul>
-                      <li>• Self-supervised learning framework for EEG signals</li>
-                      <li>• Task-agnostic representations for multiple BCI applications</li>
-                      <li>• Significant performance improvements on downstream tasks</li>
-                      <li>• Transfer learning across motor imagery, emotion recognition, and cognitive load</li>
-                    </ul>
-
-                    <div class="project-links">
-                      <a href="#" target="_blank" class="project-link">
-                        <ion-icon name="school-outline"></ion-icon> link
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </li>
 
-            <!-- IEEE Publication -->
-            <li class="project-item active" data-filter-item data-category="research">
-              <div class="project-content">
-                <figure class="project-img">
-                  <div class="project-item-icon-box">
-                    <ion-icon name="document-text-outline"></ion-icon>
-                  </div>
-                  <img src="./assets/images/blog-3.jpg" alt="Deep Learning EEG Classification" loading="lazy">
-                </figure>
+            <li class="timeline-item">
 
-                <div class="project-details">
-                  <h3 class="project-title">A Deep Learning Algorithm for Classifying Grasp Motions using Multi-session EEG Recordings</h3>
-                  <p class="project-category">IEEE Access • 2021
-                  </p>
+              <h4 class="h4 timeline-item-title">A Deep Learning Algorithm for Classifying Grasp Motions using Multi-session EEG Recordings</h4>
 
-                  <div class="project-description">
-                    <p><strong>Authors:</strong> Mohammad Ali Ahmadi, Milad Soleymani, Mehdi Ezoji</p>
+              <span>2021</span>
 
-                    <p><strong>Abstract:</strong> We present a novel deep learning architecture for classifying grasp
-                      motions from EEG signals recorded across multiple sessions. Our approach addresses the challenge
-                      of inter-session variability through domain adaptation techniques and temporal convolutional
-                      networks.</p>
+              <p class="timeline-text">
+                Mohammad Ali Ahmadi, <strong>Milad Soleymani</strong>, Mehdi Ezoji<br>
+                <em>IEEE Access</em><br><br>
+                
+                <strong>Abstract:</strong> We present a novel deep learning architecture for classifying grasp motions from EEG signals recorded across multiple sessions. Our approach addresses the challenge of inter-session variability through domain adaptation techniques and temporal convolutional networks. The proposed method achieves 87.3% accuracy on a multi-session dataset, outperforming traditional machine learning approaches by a significant margin.<br><br>
+                
+                <a href="https://ieeexplore.ieee.org/document/9385295" target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[IEEE Xplore]</a>
+              </p>
 
-                    <p><strong>Key Contributions:</strong></p>
-                    <ul>
-                      <li>• Novel deep learning architecture for multi-session EEG</li>
-                      <li>• Domain adaptation for inter-session variability</li>
-                      <li>• 87.3% accuracy on multi-session dataset</li>
-                      <li>• Applications in long-term BCI systems for motor rehabilitation</li>
-                    </ul>
-
-                    <div class="project-links">
-                      <a href="https://ieeexplore.ieee.org/document/9385295" target="_blank" class="project-link">
-                        <ion-icon name="journal-outline"></ion-icon> IEEE Xplore
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </li>
 
-          </ul>
+          </ol>
+
+        </section>
 
         </section>
 
