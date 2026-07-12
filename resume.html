@@ -203,6 +203,14 @@
           <h2 class="h2 article-title">Resume</h2>
         </header>
 
+        <section class="about-text">
+          <p>
+            <a href="./assets/cv-study.pdf" target="_blank" class="credential-btn">
+              <ion-icon name="download-outline"></ion-icon>Download full CV (PDF)
+            </a>
+          </p>
+        </section>
+
         <!-- Education Section -->
         <section class="timeline">
 
@@ -218,13 +226,14 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">M.Sc. Computer Science – Artificial Intelligence and Robotics</h4>
+              <h4 class="h4 timeline-item-title">M.Sc. Computer Science &ndash; Artificial Intelligence and Robotics
+              </h4>
 
-              <span>2024 — Present</span>
+              <span>Sep 2024 &mdash; Present</span>
 
               <p class="timeline-text">
-                Azad University, Tehran, Iran<br>
-                GPA: 4.0/4.0<br>
+                Islamic Azad University, Tehran, Iran<br>
+                <strong>GPA: 4.0/4.0</strong>
               </p>
 
             </li>
@@ -233,24 +242,11 @@
 
               <h4 class="h4 timeline-item-title">B.Sc. Electrical Engineering</h4>
 
-              <span>2018 — 2023</span>
+              <span>Sep 2018 &mdash; Sep 2023</span>
 
               <p class="timeline-text">
-                K. N. Toosi University of Technology, Tehran, Iran
-                <br>GPA: 3.14/4.0<br>
-
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Highschool Diploma, Physics and Mathematics </h4>
-
-              <span>2015 — 2018</span>
-
-              <p class="timeline-text">
-                GPA: 4.0/4.0
+                K. N. Toosi University of Technology, Tehran, Iran<br>
+                GPA: 3.14/4.0
               </p>
 
             </li>
@@ -274,49 +270,71 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">Language of Reasoning in Large Language Models: Compliance,
+                Code-Switching, and RL Training Dynamics</h4>
+
+              <span>May 2026 &mdash; Present &middot; Supervisor: Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                &bull; Demonstrated that a model&rsquo;s architecture, not its prompt, decides whether it reasons in
+                Persian: across 7 open 8B models, the one with a dedicated reasoning channel refused Persian
+                chain-of-thought (4% compliance) while every inline-CoT model complied (68&ndash;85%)<br>
+                &bull; Isolated the cause by ablating that channel on identical weights, raising compliance twenty-fold
+                at no accuracy cost &mdash; evidence that a model can appear robust to non-English reasoning having
+                never reasoned in it<br>
+                &bull; Built the evaluation harness (vLLM and API inference, sentence-level language ID, paired
+                significance tests); extending the result to training time with GRPO on Llama-3.1/3.2
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Language-Aligned and Parameter-Efficient Representation Learning for
+                Brain Signals</h4>
+
+              <span>Oct 2025 &mdash; May 2026 &middot; Supervisor: Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                &bull; Aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder
+                (CLIP-style contrastive training), decoding motor tasks from natural-language descriptions rather than
+                bare labels, toward zero-shot decoding of unseen commands<br>
+                &bull; Engineered LoRA adapters for per-subject calibration (rank 8, 1.5% of parameters trainable),
+                targeting the cross-subject variability that limits BCI deployment
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Parameter-Efficient Fine-Tuning (PEFT) for Low-Resource Adaptation of
-                Large Vision and Language Models </h4>
+                Large Vision and Language Models</h4>
 
-              <span>Jan 2025 - Present</span>
+              <span>Jan 2025 &mdash; Present &middot; Supervisors: Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                • Researched efficient PEFT strategies to adapt large-scale pretrained models (Swin, ViT) to
-                specific tasks with minimal computational resources<br>
-                • Optimized model performance and reduced computational overhead by strategically fine-
-                tuning only a subset of model parameters<br>
+                &bull; Adapted large pretrained vision models (Swin, ViT) to specialist medical tasks by training a
+                small subset of parameters, cutting the compute needed to reach task performance<br>
+                &bull; Designed an efficient Swin Transformer for cutaneous melanoma detection, submitted to
+                <em>Biomedical Signal Processing and Control</em>
+                (see <a href="publications.html" style="color: var(--ai-accent-color);">publications</a>)
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Exploring Classification and Feature Extraction Techniques in
-                Electroencephalography (EEG)</h4>
+              <h4 class="h4 timeline-item-title">Classification and Representation Learning for EEG</h4>
 
-              <span>Mar 2020 - Present</span>
-
-              <p class="timeline-text">
-                • Researched state-of-the-art EEG classification and feature extraction techniques<br>
-                • Applied advanced signal processing to analyze raw data<br>
-                • Worked on motor control classification<br>
-                • Worked on diverse datasets, preprocessed them, and prepared for training a transformer-based masked
-                auto-encoder with vector quantization to achieve robust EEG embeddings<br>
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Design and Fine-Tuning of Diffusion and VAE-Based Models for
-                Task-Specific Industrial Image Generation)</h4>
-
-              <span>Apr 2023 - Nov 2023</span>
+              <span>Mar 2020 &mdash; Jan 2025 &middot; Supervisors: Dr. Farhad Goodarzy, Dr. Andishe Partovi</span>
 
               <p class="timeline-text">
-                • Developed a custom generative pipeline using Diffusion and VAE architectures, combined with
-                ControlNet, for high-resolution industrial image synthesis<br>
-                • Applied iterative refinement processes to enhance the model’s ability to produce high-resolution,
-                task-specific images<br>
+                &bull; Built preprocessing and training pipelines across multiple public EEG datasets for a transformer
+                masked auto-encoder with vector quantization, learning task-agnostic embeddings<br>
+                &bull; Benchmarked classification and feature-extraction methods, and implemented the
+                time&ndash;frequency signal processing behind them<br>
+                &bull; Contributed, as Data Scientist at KeyLead Health, to two EEG projects that resulted in
+                peer-reviewed publications (Partovi et al., IEEE NER 2023; Journal of Neural Engineering 2025)
               </p>
 
             </li>
@@ -325,11 +343,11 @@
 
               <h4 class="h4 timeline-item-title">Voice Recognition for Chronic Heart Failure (CHF) Phenotyping</h4>
 
-              <span>Aug 2021 - May 2022</span>
+              <span>Aug 2021 &mdash; May 2022 &middot; Supervisor: Dr. Andishe Partovi</span>
 
               <p class="timeline-text">
-                • Worked on groundbreaking research for CHF detection using voice recognition<br>
-                • Collaborated with medical experts to integrate AI innovation into patient care<br>
+                &bull; Developed and evaluated models detecting chronic heart failure from voice recordings, with
+                clinicians defining the phenotypes and validating the outputs
               </p>
 
             </li>
@@ -338,7 +356,7 @@
 
         </section>
 
-        <!-- Work Experience Section -->
+        <!-- Industry Experience Section -->
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -346,7 +364,7 @@
               <ion-icon name="briefcase-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Work Experience</h3>
+            <h3 class="h3">Industry Experience</h3>
           </div>
 
           <ol class="timeline-list">
@@ -355,43 +373,63 @@
 
               <h4 class="h4 timeline-item-title">AI Engineer</h4>
 
-              <span>Sep 2024 — Present</span>
+              <span>Oct 2025 &mdash; Present</span>
 
               <p class="timeline-text">
-                MyFast Medical, Australia<br>
-                • Developed and deployed RAG (Retrieval-Augmented Generation) applications for blog generation<br>
-                • Fine-tuned large language models for medical domain-specific tasks<br>
-                • Implemented NLP pipelines for automated content generation and information retrieval
+                <a href="https://app.bozy.ai/" target="_blank" style="color: var(--ai-accent-color);">QubitOrbit (Bozy
+                  AI)</a>, Dubai, UAE / Tehran, Iran<br>
+                &bull; Built typed LLM agents with tool-grounded retrieval and clarification loops in place of
+                unconstrained generation, parsing domain shorthand into structured records<br>
+                &bull; Led an event-driven market-intelligence pipeline &mdash; filtering, embedding, deduplication and
+                online clustering in a vector database &mdash; with a multi-agent analyst running specialist models in
+                parallel<br>
+                &bull; Designed the evaluation harness behind these systems, selecting prompts and models from measured
+                accuracy and cost rather than intuition
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Computer Vision Specialist</h4>
+              <h4 class="h4 timeline-item-title">AI Engineer</h4>
 
-              <span>Nov 2023 — Feb 2024</span>
+              <span>Sep 2024 &mdash; Sep 2025</span>
 
               <p class="timeline-text">
-                ATHLX, Canada<br>
-                • Specialized in analyzing human body movements using computer vision<br>
-                • Developed ML models for motion pattern interpretation<br>
-                • Implemented Swift integration for mobile applications
+                <a href="https://myfastmedical.com/" target="_blank" style="color: var(--ai-accent-color);">MyFast
+                  Medical</a>, Australia / Tehran, Iran<br>
+                &bull; Fine-tuned large language models with reinforcement learning for empathic, patient-aligned
+                generation in healthcare<br>
+                &bull; Designed and deployed retrieval-augmented generation pipelines for medical domain tasks
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Data Scientist - Computer Vision</h4>
+              <h4 class="h4 timeline-item-title">Data Scientist (Computer Vision)</h4>
 
-              <span>Aug 2022 — Nov 2023</span>
+              <span>Nov 2023 &mdash; Feb 2024</span>
 
               <p class="timeline-text">
-                RUTILEA, Japan<br>
-                • Developed advanced generative models for images and text<br>
-                • Worked on AI-driven compressor control systems<br>
-                • Created robotic solutions for object transfer using visual inputs
+                <a href="https://www.athlx.ai/" target="_blank" style="color: var(--ai-accent-color);">ATHLX</a>, Canada
+                / Tehran, Iran<br>
+                &bull; Modelled human body movement from video, building classifiers for motion-pattern interpretation
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Data Scientist (Computer Vision)</h4>
+
+              <span>Aug 2022 &mdash; Nov 2023</span>
+
+              <p class="timeline-text">
+                <a href="https://www.rutilea.com/" target="_blank" style="color: var(--ai-accent-color);">RUTILEA</a>,
+                Japan / Tehran, Iran<br>
+                &bull; Built a generative pipeline (diffusion, VAE, ControlNet) for high-resolution industrial image
+                synthesis
               </p>
 
             </li>
@@ -400,13 +438,12 @@
 
               <h4 class="h4 timeline-item-title">Data Scientist</h4>
 
-              <span>Aug 2021 — Jul 2022</span>
+              <span>Aug 2021 &mdash; Jul 2022</span>
 
               <p class="timeline-text">
-                KeyLead Health, Australia<br>
-                • Developed AI systems for processing biological signals (EEG)<br>
-                • Worked on audio data analysis for chronic heart failure detection<br>
-                • Implemented predictive analytics on pharmaceutical data
+                KeyLead Health, Australia / Tehran, Iran<br>
+                &bull; Built AI systems for biosignal and voice analysis (EEG decoding, chronic heart failure
+                phenotyping)
               </p>
 
             </li>
@@ -415,97 +452,118 @@
 
         </section>
 
-        <!-- Courses and Certificates Section -->
+        <!-- Teaching Section -->
         <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="trophy-outline"></ion-icon>
+              <ion-icon name="easel-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">Courses & Certificates</h3>
+            <h3 class="h3">Teaching Experience</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Task-Oriented Course In C++ Programming Language Quera</h4>
+              <h4 class="h4 timeline-item-title">Natural Language Processing</h4>
 
-              <span>Jun 2025</span>
+              <span>Sep 2025 &mdash; Present</span>
 
               <p class="timeline-text">
-                <a href="https://quera.org/certificate/uGLIIL29/" class="credential-btn"><ion-icon
-                    name="link-outline"></ion-icon>See credential</a>
+                Islamic Azad University, Tehran, Iran &mdash; with Dr. Nava Eslami
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Honors Section -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="ribbon-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Honors &amp; Awards</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Top Student, M.Sc. Artificial Intelligence and Robotics</h4>
+
+              <span>Sep 2024 &mdash; Present</span>
+
+              <p class="timeline-text">
+                Islamic Azad University, Tehran, Iran<br>
+                Named among the department&rsquo;s top students, with a <strong>GPA of 4.0/4.0</strong>
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Task-Oriented Course In Linux Quera</h4>
+              <h4 class="h4 timeline-item-title">2020 International BCI Competition &mdash; 6th Place</h4>
 
-              <span>Mar 2023</span>
-
-              <p class="timeline-text">
-                <a href="https://quera.org/certificate/dYEEj399/" class="credential-btn"><ion-icon
-                    name="link-outline"></ion-icon>See credential</a>
-              </p>
-
-            </li>
-
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">DeepLearning.AI TensorFlow Developer Professional Certificate by
-                Deeplearning.ai, Coursera</h4>
-
-              <span>Jun 2021</span>
+              <span>Jan 2021</span>
 
               <p class="timeline-text">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/5DRTD673E29H"
-                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See credential</a>
+                Classifying hand grasping motion (cylindrical, spherical, lumbrical)<br>
+                Published as <em>A Deep Learning Algorithm for Classifying Grasp Motions using Multi-session EEG
+                  Recordings</em>, 9th International Winter Conference on BCI
+                (see <a href="publications.html" style="color: var(--ai-accent-color);">publications</a>)
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Advance python programming and object-oriented thinking course Quera
-              </h4>
+              <h4 class="h4 timeline-item-title">Iran National University Entrance Exam (Konkur), B.Sc.</h4>
 
-              <span>Jun 2021</span>
+              <span>2018</span>
 
               <p class="timeline-text">
-                <a href="https://quera.org/certificate/LbJxralA/" class="credential-btn"><ion-icon
-                    name="link-outline"></ion-icon>See credential</a>
+                Ranked in the top 0.3% of over 200,000 students
               </p>
 
             </li>
 
+          </ol>
+
+        </section>
+
+        <!-- Graduate Coursework Section -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="school-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Graduate Coursework</h3>
+          </div>
+
+          <ol class="timeline-list">
+
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Deep Learning Specialization by Deeplearning.ai, Coursera</h4>
-
-              <span>Aug 2020</span>
+              <h4 class="h4 timeline-item-title">M.Sc. AI and Robotics &mdash; grades out of 20</h4>
 
               <p class="timeline-text">
-                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QE6EKNBMCYBV"
-                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See
-                  credential</a>
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Machine Learning by Stanford University, Coursera</h4>
-
-              <span>May 2020</span>
-
-              <p class="timeline-text">
-                <a href="https://www.coursera.org/account/accomplishments/certificate/LGMXQUMD8DT9"
-                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See credential</a>
+                Deep Learning <strong>20</strong> &middot; Large Language Models <strong>20</strong> &middot; Pattern
+                Recognition <strong>20</strong> &middot; Digital Signal Processing <strong>20</strong> &middot; Machine
+                Learning <strong>19</strong> &middot; Deep Reinforcement Learning <strong>19</strong> &middot;
+                Evolutionary Computing <strong>18.7</strong> &middot; Numerical Computation <strong>18.5</strong>
+                &middot; Engineering Mathematics <strong>18.4</strong> &middot; Advanced Programming
+                <strong>18.2</strong><br>
+                <br>
+                <em>All courses graded 4.0/4.0 on the university&rsquo;s 4-point scale.</em>
               </p>
 
             </li>
@@ -532,17 +590,46 @@
               <h4 class="h4 timeline-item-title">Programming Languages</h4>
 
               <p class="timeline-text">
-                Python, C++, Java, MATLAB
+                Python, Java, C++
               </p>
 
             </li>
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Operating Systems</h4>
+              <h4 class="h4 timeline-item-title">Machine Learning and Deep Learning</h4>
 
               <p class="timeline-text">
-                Linux
+                <strong>LLMs:</strong> parameter-efficient fine-tuning (adapters, LoRA, prefix-tuning), reinforcement
+                learning from feedback (RLHF, GRPO), reasoning-model fine-tuning<br>
+                <strong>Multimodal and vision:</strong> generative modelling (diffusion, VAEs, ControlNet), contrastive
+                and self-supervised representation learning, vision transformers<br>
+                <strong>EEG and signal processing:</strong> time&ndash;frequency analysis, representation learning,
+                transformer-based embeddings
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">LLM Systems and Retrieval</h4>
+
+              <p class="timeline-text">
+                Agent design with tool calling and structured output, Model Context Protocol (MCP), prompt engineering,
+                LLM evaluation and cost&ndash;accuracy benchmarking<br>
+                End-to-end RAG: embedding models, chunking, hybrid embedding and BM25 retrieval; vector databases
+                (Qdrant, FAISS, ChromaDB)
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">MLOps, Deployment and Infrastructure</h4>
+
+              <p class="timeline-text">
+                Docker, Linux, Bash<br>
+                Model monitoring, optimization, quantization, inference acceleration
               </p>
 
             </li>
@@ -552,7 +639,90 @@
               <h4 class="h4 timeline-item-title">Languages</h4>
 
               <p class="timeline-text">
-                Persian (Native), English: TOEFL Score: 93
+                English (TOEFL iBT: 93, Dec 2023), Persian (native)
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Courses and Certificates Section -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="trophy-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Courses &amp; Certificates</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Task-Oriented Course in Linux, Quera</h4>
+
+              <span>Mar 2023</span>
+
+              <p class="timeline-text">
+                <a href="https://quera.org/certificate/dYEEj399/" class="credential-btn"><ion-icon
+                    name="link-outline"></ion-icon>See credential</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">DeepLearning.AI TensorFlow Developer Professional Certificate,
+                Coursera</h4>
+
+              <span>Jun 2021</span>
+
+              <p class="timeline-text">
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/5DRTD673E29H"
+                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See credential</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Advanced Python Programming and Object-Oriented Thinking, Quera</h4>
+
+              <span>Jun 2021</span>
+
+              <p class="timeline-text">
+                <a href="https://quera.org/certificate/LbJxralA/" class="credential-btn"><ion-icon
+                    name="link-outline"></ion-icon>See credential</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Deep Learning Specialization, DeepLearning.AI, Coursera</h4>
+
+              <span>Aug 2020</span>
+
+              <p class="timeline-text">
+                <a href="https://www.coursera.org/account/accomplishments/specialization/certificate/QE6EKNBMCYBV"
+                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See credential</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Machine Learning, Coursera</h4>
+
+              <span>May 2020</span>
+
+              <p class="timeline-text">
+                <a href="https://www.coursera.org/account/accomplishments/certificate/LGMXQUMD8DT9"
+                  class="credential-btn"><ion-icon name="link-outline"></ion-icon>See credential</a>
               </p>
 
             </li>
@@ -579,10 +749,12 @@
               <h4 class="h4 timeline-item-title">Dr. Behrooz Nasihatkon</h4>
 
               <p class="timeline-text">
-                Assistant Professor in the Computer Science Department at K. N. Toosi University of Technology<br>
-                CEO at Rahbin Sanat Nasir<br>
-                <a href="mailto:nasihatkon@kntu.ac.ir" style="color: hsl(45, 54%, 58%);">Email:
-                  nasihatkon@kntu.ac.ir</a>
+                Assistant Professor, Computer Science, K. N. Toosi University of Technology; CEO at Rahbin Sanat
+                Nasir<br>
+                <a href="mailto:nasihatkon@kntu.ac.ir" style="color: var(--ai-accent-color);">nasihatkon@kntu.ac.ir</a>
+                &middot;
+                <a href="https://www.linkedin.com/in/behrooz-nasihatkon-37835743/" target="_blank"
+                  style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
             </li>
@@ -592,9 +764,8 @@
               <h4 class="h4 timeline-item-title">Dr. Maliheh Sabeti</h4>
 
               <p class="timeline-text">
-                Assistant Professor in the Computer Engineering at Islamic Azad University, North Tehran Branch<br>
-                <a href="mailto:m_sabeti@iau-tnb.ac.ir" style="color: hsl(45, 54%, 58%);">Email:
-                  m_sabeti@iau-tnb.ac.ir</a>
+                Associate Professor, Computer Engineering, Islamic Azad University, North Tehran Branch<br>
+                <a href="mailto:sabeti@shirazu.ac.ir" style="color: var(--ai-accent-color);">sabeti@shirazu.ac.ir</a>
               </p>
 
             </li>
@@ -604,10 +775,12 @@
               <h4 class="h4 timeline-item-title">Dr. Farhad Goodarzy</h4>
 
               <p class="timeline-text">
-                Senior Researcher at the University of Melbourne, Australia<br>
-                Senior AI Research Scientist at WEHI (Walter and Eliza Hall Institute of Medical Research)<br>
-                <a href="mailto:goodarzy@unimelb.edu.au" style="color: hsl(45, 54%, 58%);">Email:
-                  goodarzy@unimelb.edu.au</a>
+                Senior Researcher, University of Melbourne; Senior AI Research Scientist, WEHI (Walter and Eliza Hall
+                Institute of Medical Research)<br>
+                <a href="mailto:goodarzy@unimelb.edu.au"
+                  style="color: var(--ai-accent-color);">goodarzy@unimelb.edu.au</a> &middot;
+                <a href="https://www.linkedin.com/in/farhadgoodarzy/" target="_blank"
+                  style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
             </li>
@@ -617,10 +790,11 @@
               <h4 class="h4 timeline-item-title">Dr. Andishe Partovi</h4>
 
               <p class="timeline-text">
-                AI/ML Specialist at Google Cloud<br>
-                Cofounder Veris AI<br>
-                <a href="mailto:andipartovi@google.com" style="color: hsl(45, 54%, 58%);">Email:
-                  andipartovi@google.com</a>
+                AI/ML Specialist at Google Cloud; Cofounder of Veris AI<br>
+                <a href="mailto:andipartovi@google.com"
+                  style="color: var(--ai-accent-color);">andipartovi@google.com</a> &middot;
+                <a href="https://www.linkedin.com/in/andi-partovi/" target="_blank"
+                  style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
             </li>
@@ -630,11 +804,12 @@
               <h4 class="h4 timeline-item-title">Dr. Nava Eslami</h4>
 
               <p class="timeline-text">
-                Researcher at
-                Sharif University of Technology's AI research center<br>
-                Lecturer at Islamic Azad University<br>
-                <a href="https://www.linkedin.com/in/nava-eslami-914a0074/"
-                  style="color: hsl(45, 54%, 58%);">Linkedin</a>
+                Researcher at Sharif University of Technology&rsquo;s AI research center; Lecturer at Islamic Azad
+                University<br>
+                <a href="mailto:nava_eslami_157@iau.ac.ir"
+                  style="color: var(--ai-accent-color);">nava_eslami_157@iau.ac.ir</a> &middot;
+                <a href="https://www.linkedin.com/in/nava-eslami-914a0074/" target="_blank"
+                  style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
             </li>

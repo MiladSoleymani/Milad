@@ -203,49 +203,73 @@
           <h2 class="h2 article-title">Publications</h2>
         </header>
 
-        <!-- 2025 Publication -->
+        <!-- Under review -->
         <section class="timeline">
 
           <div class="title-wrapper">
             <div class="icon-box">
-              <ion-icon name="document-text-outline"></ion-icon>
+              <ion-icon name="hourglass-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">2025</h3>
+            <h3 class="h3">Under Review</h3>
           </div>
 
           <ol class="timeline-list">
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">An efficient Swin Transformer Architecture for Cutaneous Melanoma
-                Detection</h4>
+              <h4 class="h4 timeline-item-title">Reasoning in Persian Is Optional: A Compliance Axis for
+                Target-Language Chain-of-Thought in 8B Models</h4>
 
-              <span>Jan 2025 - Present</span>
+              <span>2026</span>
 
               <p class="timeline-text">
-                Reza Esmkhani, <strong>Milad Soleimani</strong>, Soroush Ziaee, Maliheh Sabeti, Nava Eslami<br>
+                <strong>Milad Soleymani</strong>, Kimia Hoseyni, Soroush Ziaee, Nava Eslami<br>
+                <em>Manuscript under review</em><br>
 
                 <br>
 
-                Melanoma is the deadliest and most unpredictable type of skin cancer. This paper aims to develop a
-                robust image classification model for the early detection of melanoma, a deadly skin cancer. This
-                investigation addresses the limitations of previous methods by developing and validating
-                parameter-efficient Swin Transformer adapters, which are explicitly optimized for melanoma
-                classification. Our approach implements bottleneck adapters with down-projection, non-linearity,
-                up-projection architecture, requiring only 2-4% of total model parameters compared to LoRA's 0.1-0.3%,
-                while providing superior modularity for multi-task scenarios despite introducing up to 50% throughput
-                degradation in sequential processing. The resulting framework is designed to enable deployment on
-                resource-constrained platforms while maintaining clinical-grade accuracy, thereby facilitating broader
-                access to AI-assisted diagnostic. The methodology encompasses stratified 4-fold cross-validation on
-                established benchmark datasets, measuring sensitivity, specificity, F1-score, and computational metrics
-                including inference time (target <100ms), memory usage (within 4GB constraints), and FLOPs reduction
-                  compared to full fine-tuning. This work advances current understanding of evidence supporting
-                  parameter-efficient approaches for medical AI while providing a validated framework for clinical
-                  deployment.<br>
+                Asked to reason in Persian, most open models reason in English instead. Across seven open 8B models we
+                show that compliance is decided by architecture rather than by the prompt: the single model with a
+                dedicated reasoning channel produced Persian chain-of-thought in only 4% of cases, while every
+                inline-CoT model complied 68&ndash;85% of the time. Ablating that channel on identical weights raised
+                compliance twenty-fold at no cost in task accuracy, showing that a model can appear robust to
+                non-English reasoning while never having reasoned in it. We release the evaluation harness (vLLM and API
+                inference, sentence-level language identification, paired significance tests) and extend the finding to
+                training time with GRPO on Llama-3.1/3.2.<br>
 
-                  <a href="https://drive.google.com/file/d/1hXl8yPooo4ErI5sYlfwMacormP2lWXfm/view?usp=sharing"
-                    target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
+                <a href="https://drive.google.com/file/d/1uTyC0aJyD-4KIEe7iu3iRADGBWc1Ov6_/view?usp=sharing"
+                  target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">An Efficient Swin Transformer Architecture for Cutaneous Melanoma
+                Detection</h4>
+
+              <span>2026</span>
+
+              <p class="timeline-text">
+                Mohammad Reza Esmkhani, <strong>Milad Soleymani</strong>, Soroush Ziaee, Nava Eslami, Reza Boostani,
+                Maliheh Sabeti<br>
+                <em>Biomedical Signal Processing and Control (Elsevier) &mdash; manuscript BSPC-D-26-10609</em><br>
+
+                <br>
+
+                Melanoma is the deadliest form of skin cancer, and the models that detect it best are the ones hardest
+                to deploy where they are needed. We develop and validate parameter-efficient Swin Transformer adapters
+                for melanoma classification: bottleneck adapters with a down-projection, non-linearity and
+                up-projection, training only a small fraction of the model's parameters while keeping the modularity
+                that multi-task clinical settings require. Evaluated with stratified 4-fold cross-validation on
+                established benchmarks, measuring sensitivity, specificity and F1 alongside inference time, memory
+                footprint and FLOPs against full fine-tuning. The result is a framework aimed at resource-constrained
+                deployment without giving up clinical-grade accuracy.<br>
+
+                <a href="https://drive.google.com/file/d/1hXl8yPooo4ErI5sYlfwMacormP2lWXfm/view?usp=sharing"
+                  target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
 
               </p>
 
@@ -255,7 +279,7 @@
 
         </section>
 
-        <!-- 2021 Publication -->
+        <!-- Peer-reviewed -->
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -263,7 +287,7 @@
               <ion-icon name="document-text-outline"></ion-icon>
             </div>
 
-            <h3 class="h3">2021</h3>
+            <h3 class="h3">Peer-Reviewed</h3>
           </div>
 
           <ol class="timeline-list">
@@ -273,27 +297,71 @@
               <h4 class="h4 timeline-item-title">A Deep Learning Algorithm for Classifying Grasp Motions using
                 Multi-session EEG Recordings</h4>
 
-              <span>Mar 2020 - Jan 2021</span>
+              <span>2021</span>
 
               <p class="timeline-text">
-                Andy Partovi, Seyed Mehrshad Hosseini, <strong>Milad Soleymani</strong>, Kiana Liaghat, Soroush Ziaee,
-                Erfan Habibi Panah Fard<br>
-                <em>2021 9th International Winter Conference on Brain-Computer Interface (BCI)</em><br>
+                Andishe Partovi, Seyed Mehrshad Hosseini, <strong>Milad Soleymani</strong>, Kiana Liaghat, Soroush
+                Ziaee, Erfan Habibi Panah Fard, Sina Sadeghpour Vajdi, Farhad Goodarzy<br>
+                <em>9th International Winter Conference on Brain-Computer Interface (BCI)</em><br>
 
                 <br>
 
-                The classification of motor imagery tasks using scalp EEG signals is a complicated procedure in BCI
-                especially when the task comprises multiple gestures of the same hand. In this paper, we present a
-                classification method to distinguish three grasp motion classes (cylindrical, spherical, and lumbrical)
-                of one hand over two-day training sessions in 15 subjects in a public dataset. We have developed two
-                ensemble methods consisting of (anomaly detection + fully connected neural network) and (anomaly
-                detection + convolutional neural network) to classify grasp motion and have achieved more than 80%
-                classification accuracy in 3 subjects and an average accuracy of 57% among the full cohort. Our results
-                confirm the possibility of utilizing neural networks to decode motor movement intentions from scalp EEG
-                in a complicated task.<br>
+                Classifying motor imagery from scalp EEG is hard enough; it is harder still when the gestures all belong
+                to the same hand. We distinguish three grasp motions (cylindrical, spherical and lumbrical) across
+                two-day training sessions in 15 subjects of a public dataset, using two ensembles &mdash; anomaly
+                detection paired with a fully connected network, and with a convolutional network. The method reaches
+                over 80% accuracy in 3 subjects and 57% on average across the cohort, supporting the feasibility of
+                decoding fine motor intent from scalp EEG. The work grew out of a 6th-place finish in the 2020
+                International BCI Competition.<br>
 
-                <a href="https://ieeexplore.ieee.org/document/9385295" target="_blank"
+                <a href="https://doi.org/10.1109/BCI51272.2021.9385295" target="_blank"
                   style="color: var(--ai-accent-color); text-decoration: none;">[IEEE Xplore]</a>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Contributions -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="people-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Contributions to Published Work</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">EEG projects at KeyLead Health</h4>
+
+              <span>2023 &mdash; 2025</span>
+
+              <p class="timeline-text">
+                As a data scientist at KeyLead Health I contributed to two EEG projects that resulted in peer-reviewed
+                publications. I am <em>not</em> an author on either paper; both are the work of Partovi, Burkitt and
+                Grayden, and they are listed here as contributions rather than publications.<br>
+
+                <br>
+
+                Partovi A., Burkitt A. N., Grayden D. <strong>A Self-Supervised Task-Agnostic Embedding for EEG
+                  Signals</strong>, IEEE/EMBS Conference on Neural Engineering (NER), 2023.
+                <a href="https://ieeexplore.ieee.org/document/10123767" target="_blank"
+                  style="color: var(--ai-accent-color); text-decoration: none;">[IEEE Xplore]</a><br>
+
+                <br>
+
+                Partovi A., Grayden D. B., Burkitt A. N. <strong>POC-CSP: A Novel Parameterised and
+                  Orthogonally-Constrained Neural Network Layer for Learning Common Spatial Patterns (CSP) in EEG
+                  Signals</strong>, Journal of Neural Engineering, 2025.
+                <a href="https://doi.org/10.1088/1741-2552/add8bc" target="_blank"
+                  style="color: var(--ai-accent-color); text-decoration: none;">[DOI]</a>
               </p>
 
             </li>
