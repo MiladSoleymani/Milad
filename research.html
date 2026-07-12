@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Research - Milad Soleymani</title>
+  <meta name="description"
+    content="Research by Milad Soleymani on multilingual reasoning in language models, parameter-efficient fine-tuning, brain-signal representation learning, and medical AI.">
+  <meta name="keywords"
+    content="chain-of-thought, multilingual reasoning, GRPO, parameter-efficient fine-tuning, LoRA, EEG, BCI, medical AI">
+  <meta name="author" content="Milad Soleymani">
+
+  <!--
+    - favicon
+  -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!--
+    - custom css link
+  -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!--
+    - google font link
+  -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+  <!--
+    - #MAIN
+  -->
+
+  <main>
+
+    <!--
+      - #SIDEBAR
+    -->
+
+    <aside class="sidebar" data-sidebar>
+
+      <div class="sidebar-info">
+
+        <figure class="avatar-box">
+          <img src="./assets/images/profile_pic.png" alt="Milad Soleymani" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Milad Soleymani">Milad Soleymani</h1>
+
+          <p class="title">AI/ML Researcher</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+
+        <div class="separator"></div>
+
+        <ul class="contacts-list">
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+
+              <a href="mailto:miladsoleiimani@gmail.com" class="contact-link">miladsoleiimani@gmail.com</a>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+
+              <span class="contact-link">Available upon request</span>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="calendar-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Education</p>
+
+              <span>M.Sc. AI &amp; Robotics</span>
+            </div>
+
+          </li>
+
+          <li class="contact-item">
+
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+
+              <address>Tehran, Iran</address>
+            </div>
+
+          </li>
+
+        </ul>
+
+        <div class="separator"></div>
+
+        <ul class="social-list">
+
+          <li class="social-item">
+            <a href="https://github.com/MiladSoleymani" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://linkedin.com/in/miladsoleymani" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
+          <li class="social-item">
+            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+              <ion-icon name="school-outline"></ion-icon>
+            </a>
+          </li>
+
+        </ul>
+
+      </div>
+
+    </aside>
+
+    <!--
+      - #main-content
+    -->
+
+    <div class="main-content">
+
+      <!--
+        - #NAVBAR
+      -->
+
+      <nav class="navbar">
+
+        <ul class="navbar-list">
+
+          <li class="navbar-item">
+            <a href="index.html" class="navbar-link">About</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="resume.html" class="navbar-link">Resume</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="research.html" class="navbar-link active">Research</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="publications.html" class="navbar-link">Publications</a>
+          </li>
+
+          <li class="navbar-item">
+            <a href="contact.html" class="navbar-link">Contact</a>
+          </li>
+
+        </ul>
+
+      </nav>
+
+      <!--
+        - #RESEARCH
+      -->
+
+      <article class="resume active" data-page="research">
+
+        <header>
+          <h2 class="h2 article-title">Research</h2>
+        </header>
+
+        <section class="about-text">
+          <p>
+            My work asks how large models can be adapted — cheaply, and without losing what makes them useful — to
+            settings they were not built for: a language other than English, a single patient's brain, a clinical
+            domain with almost no labelled data. Four threads run through it, from multilingual reasoning in language
+            models to representation learning for brain signals. Code for the public projects is linked below; the
+            manuscripts appear on the <a href="publications.html" class="contact-link">publications</a> page.
+          </p>
+        </section>
+
+        <!-- Thread 1 -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="language-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Multilingual Reasoning in Language Models</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Reasoning in Persian is optional: a compliance axis for
+                target-language chain-of-thought</h4>
+
+              <span>May 2026 — Present · with Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                A model asked to think in Persian usually thinks in English instead. Across seven open 8B models I found
+                that whether it complies is decided by architecture, not by the prompt: the one model with a dedicated
+                reasoning channel refused Persian chain-of-thought almost entirely (4% compliance), while every
+                inline-CoT model complied 68–85% of the time. Ablating that channel on identical weights raised
+                compliance twenty-fold at no cost in accuracy — which means a model can look robust to non-English
+                reasoning while having never reasoned in it at all.
+                <br><br>
+                I built the evaluation harness behind the result (vLLM and API inference, sentence-level language
+                identification, paired significance tests), and I am now extending it from inference time to training
+                time: how the language of the chain-of-thought shapes GRPO training dynamics under verifiable rewards,
+                tracking rollout language ratio and switch rate through training rather than final accuracy alone.
+                <br><br>
+                <em>Manuscript under review, 2026. Code available on request.</em>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Thread 2 -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="pulse-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Representation Learning for Brain Signals</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Language-aligned and parameter-efficient decoding</h4>
+
+              <span>Oct 2025 — May 2026 · with Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                A brain–computer interface trained on fixed class labels can only ever decode the classes it was shown.
+                I aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder using
+                CLIP-style contrastive training, so motor tasks are decoded from natural-language descriptions rather
+                than bare labels — a step toward zero-shot decoding of commands the model has never seen. Alongside it I
+                built LoRA adapters for per-subject calibration (rank 8, 1.5% of parameters trainable), aimed at the
+                cross-subject variability that keeps BCIs in the lab.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/EEG-Clip" target="_blank" class="contact-link">EEG-CLIP
+                  code</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Task-agnostic embeddings and EEG classification</h4>
+
+              <span>Mar 2020 — Jan 2025 · with Dr. Farhad Goodarzy, Dr. Andishe Partovi</span>
+
+              <p class="timeline-text">
+                Earlier work on the same problem from the self-supervised side: preprocessing and training pipelines
+                across several public EEG datasets for a transformer masked auto-encoder with vector quantization,
+                learning embeddings that transfer across tasks, together with the benchmarking and time–frequency signal
+                processing underneath. As a data scientist at KeyLead Health I contributed to two EEG projects that
+                became peer-reviewed publications (Partovi et al., IEEE NER 2023; Journal of Neural Engineering 2025).
+                My own first paper in this line — a deep learning algorithm for classifying grasp motions from
+                multi-session EEG — came out of a 6th-place finish in the 2020 International BCI Competition.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/Self-supervised-Task-agnostic-EEG-Embedding" target="_blank"
+                  class="contact-link">Self-supervised EEG embedding</a> ·
+                <a href="https://github.com/MiladSoleymani/baseline_models_eeg" target="_blank"
+                  class="contact-link">Baseline models</a> ·
+                <a href="https://ieeexplore.ieee.org/document/9385295" target="_blank" class="contact-link">BCI 2021
+                  paper</a>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Thread 3 -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="medkit-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Parameter-Efficient Adaptation for Medical AI</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">PEFT for low-resource vision and language models</h4>
+
+              <span>Jan 2025 — Present · with Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                Medical tasks rarely come with enough labelled data to fine-tune a large pretrained model end to end. I
+                adapt large vision models (Swin, ViT) to specialist medical tasks by training a small subset of their
+                parameters, cutting the compute needed to reach task performance. The concrete result is an efficient
+                Swin Transformer architecture for cutaneous melanoma detection, submitted to <em>Biomedical Signal
+                  Processing and Control</em>. A related study takes the same question into clinical text, pairing
+                Bio+ClinicalBERT with a CNN feature extractor and benchmarking the hybrid against four baselines.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/Hybrid-BioClinical-BERT-with-CNN" target="_blank"
+                  class="contact-link">Bio+ClinicalBERT + CNN code</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Molecular subgrouping of pediatric medulloblastoma from MRI</h4>
+
+              <span>2026 — Present</span>
+
+              <p class="timeline-text">
+                A benchmark built on a self-collected Iranian institutional cohort of pediatric medulloblastoma
+                patients: multi-sequence MRI (T1, T1c, T2, FLAIR, ADC) against the four-way WHO molecular subgroup
+                labels. Most of the work so far is the unglamorous half of medical AI — DICOM inventory, sequence
+                coverage, and label linkage — which is exactly where the cohort's real constraints live.
+                <br><br>
+                <em>In progress. Code available on request.</em>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Thread 4 -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="heart-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Empathic and Affective Language Models</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Reinforcement learning for empathic generation</h4>
+
+              <span>Sep 2024 — Sep 2025 · MyFast Medical</span>
+
+              <p class="timeline-text">
+                Empathy is easy to ask a model for and hard to reward it for. I fine-tuned language models with Group
+                Relative Policy Optimization against composite reward functions — a semantic-similarity term for staying
+                on topic, and a fine-tuned RoBERTa empathy model as the reward signal itself — for patient-aligned
+                generation in healthcare, alongside retrieval-augmented pipelines for medical domain tasks.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/GRPO-EMPATHY" target="_blank" class="contact-link">GRPO-Empathy
+                  code</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Annotating clinical empathy</h4>
+
+              <span>2026</span>
+
+              <p class="timeline-text">
+                Reward models for empathy are only as good as the construct they are trained on, so this is the data
+                half of the problem: an annotation tool and schema for "breaking bad news" conversations, built on the
+                Appraisal Framework for Clinical Empathy, for labelling the empathic moves clinicians actually make.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/BBN-Annotation" target="_blank" class="contact-link">BBN
+                  annotation tool</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Affect and health signals in the voice</h4>
+
+              <span>Aug 2021 — May 2022 · with Dr. Andishe Partovi</span>
+
+              <p class="timeline-text">
+                Before the language models, the same interest in affect approached through audio: models detecting
+                chronic heart failure from voice recordings, with clinicians defining the phenotypes and validating the
+                outputs. More recently, a CNN classifier for infant cry audio across five need categories — the same
+                question of how much internal state a voice actually carries.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/infant_cry_classification" target="_blank"
+                  class="contact-link">Infant cry classification</a>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- Applied work -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="construct-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">Applied Systems</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">LLM agents, retrieval and evaluation</h4>
+
+              <span>2022 — Present · QubitOrbit, ATHLX, RUTILEA</span>
+
+              <p class="timeline-text">
+                Industry work that feeds the research rather than competing with it: typed LLM agents with
+                tool-grounded retrieval in place of unconstrained generation, an event-driven market-intelligence
+                pipeline (embedding, deduplication, online clustering over a vector database) with a multi-agent
+                analyst, and the evaluation harness that picks the prompts and models from measured accuracy and cost
+                rather than intuition. Earlier: generative pipelines for high-resolution industrial image synthesis
+                (diffusion, VAE, ControlNet) at RUTILEA, and human motion modelling from video at ATHLX.
+                <br><br>
+                <a href="https://github.com/MiladSoleymani/PDF-QA-using-LLM" target="_blank" class="contact-link">PDF
+                  question answering</a> ·
+                <a href="https://github.com/MiladSoleymani/video_segmentation_tool" target="_blank"
+                  class="contact-link">Video segmentation tool</a> ·
+                <a href="https://github.com/MiladSoleymani" target="_blank" class="contact-link">More on GitHub</a>
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+      </article>
+
+    </div>
+
+  </main>
+
+  <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
+    - ionicon link
+  -->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
