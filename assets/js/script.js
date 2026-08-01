@@ -240,40 +240,6 @@ function initScrollAnimations() {
   });
 }
 
-// Enhanced cursor trail effect
-function initCursorTrail() {
-  const trail = [];
-  const trailLength = 10;
-  
-  // Create trail elements
-  for (let i = 0; i < trailLength; i++) {
-    const dot = document.createElement('div');
-    dot.className = 'cursor-trail';
-    dot.style.cssText = `
-      position: fixed;
-      width: ${8 - i * 0.5}px;
-      height: ${8 - i * 0.5}px;
-      background: radial-gradient(circle, rgba(0, 212, 255, ${1 - i * 0.1}) 0%, transparent 70%);
-      border-radius: 50%;
-      pointer-events: none;
-      z-index: 9999;
-      mix-blend-mode: screen;
-      transition: all 0.1s ease-out;
-    `;
-    document.body.appendChild(dot);
-    trail.push(dot);
-  }
-  
-  document.addEventListener('mousemove', (e) => {
-    trail.forEach((dot, index) => {
-      setTimeout(() => {
-        dot.style.left = e.clientX + 'px';
-        dot.style.top = e.clientY + 'px';
-      }, index * 10);
-    });
-  });
-}
-
 // Floating elements animation
 function initFloatingElements() {
   const floatingElements = document.querySelectorAll('.project-item, .blog-post-item');
@@ -499,7 +465,6 @@ document.addEventListener('DOMContentLoaded', () => {
     initDynamicBackground();
     initTypingEffect();
     initScrollAnimations();
-    initCursorTrail();
     initFloatingElements();
     initInteractiveSkillBars();
     initGlitchEffect();
