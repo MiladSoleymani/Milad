@@ -2968,11 +2968,28 @@ article:hover {
 /* The global reset puts `a` in a `display: block` group, which breaks links that
    sit inline inside running text. Restore inline flow in prose contexts only —
    nav links, social icons and credential buttons still need to be blocks. */
-.about-text p a,
-.about-text li a,
-.highlights-list li a,
+.about-text p a:not(.credential-btn),
+.about-text li a:not(.credential-btn),
+.highlights-list li a:not(.credential-btn),
 .timeline-text a:not(.credential-btn) {
   display: inline;
+  color: var(--ai-accent-color);
+}
+
+/* Unstyled anchors otherwise fall back to the browser's default blue/purple,
+   which is unreadable on the dark background — and turns purple once visited. */
+.about-text p a:not(.credential-btn):visited,
+.about-text li a:not(.credential-btn):visited,
+.highlights-list li a:not(.credential-btn):visited,
+.timeline-text a:not(.credential-btn):visited {
+  color: var(--ai-accent-color);
+}
+
+.about-text p a:not(.credential-btn):hover,
+.about-text li a:not(.credential-btn):hover,
+.highlights-list li a:not(.credential-btn):hover,
+.timeline-text a:not(.credential-btn):hover {
+  text-decoration: underline;
 }
 
 .highlights-list li strong {
