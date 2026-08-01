@@ -144,7 +144,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+            <a href="https://scholar.google.com/citations?user=PUq5PtEAAAAJ&hl=en" class="social-link">
               <ion-icon name="school-outline"></ion-icon>
             </a>
           </li>
@@ -233,7 +233,7 @@
 
               <p class="timeline-text">
                 Islamic Azad University, Tehran, Iran<br>
-                <strong>GPA: 4.0/4.0</strong>
+                <strong>GPA: 19.63/20 (&asymp; 4.0/4.0)</strong>
               </p>
 
             </li>
@@ -246,7 +246,7 @@
 
               <p class="timeline-text">
                 K. N. Toosi University of Technology, Tehran, Iran<br>
-                GPA: 3.14/4.0
+                GPA: 15.78/20 (&asymp; 3.16/4.0)
               </p>
 
             </li>
@@ -276,12 +276,13 @@
               <span>May 2026 &mdash; Present &middot; Supervisor: Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                &bull; Demonstrated that a model&rsquo;s architecture, not its prompt, decides whether it reasons in
-                Persian: across 7 open 8B models, the one with a dedicated reasoning channel refused Persian
-                chain-of-thought (4% compliance) while every inline-CoT model complied (68&ndash;85%)<br>
-                &bull; Isolated the cause by ablating that channel on identical weights, raising compliance twenty-fold
-                at no accuracy cost &mdash; evidence that a model can appear robust to non-English reasoning having
-                never reasoned in it<br>
+                &bull; Demonstrated that architecture, not prompting, sets whether an 8B model reasons in Persian: on
+                210 paired MathMist problems a reasoning-channel model complied at 4% against 80&ndash;85% for
+                inline-CoT models, and disabling its thinking channel flipped the same weights to 84% (paired
+                McNemar)<br>
+                &bull; Identified a measurement hazard for cross-lingual evaluation: English accuracy falls 91%
+                &rarr; 33% as Persian-CoT compliance rises, so an apparently robust model may never have reasoned in
+                Persian at all<br>
                 &bull; Built the evaluation harness (vLLM and API inference, sentence-level language ID, paired
                 significance tests); extending the result to training time with GRPO on Llama-3.1/3.2
               </p>
@@ -299,8 +300,10 @@
                 &bull; Aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder
                 (CLIP-style contrastive training), decoding motor tasks from natural-language descriptions rather than
                 bare labels, toward zero-shot decoding of unseen commands<br>
-                &bull; Engineered LoRA adapters for per-subject calibration (rank 8, 1.5% of parameters trainable),
-                targeting the cross-subject variability that limits BCI deployment
+                &bull; Adapted that embedding to new subjects with parameter-efficient LoRA (rank 8, ~1% of
+                parameters), targeting the cross-subject variability that limits BCI deployment<br>
+                &bull; Reinforcement-learning fine-tuning is underway, with the purpose of reliable cross-subject
+                decoding from minimal calibration data
               </p>
 
             </li>
@@ -587,10 +590,12 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Programming Languages</h4>
+              <h4 class="h4 timeline-item-title">Programming and Tooling</h4>
 
               <p class="timeline-text">
-                Python, Java, C++
+                Python (expert); PyTorch, HuggingFace Transformers, NumPy/SciPy/scikit-learn (advanced); Git, Linux,
+                Docker, LaTeX (working)<br>
+                Also: Java, C++
               </p>
 
             </li>
@@ -630,6 +635,17 @@
               <p class="timeline-text">
                 Docker, Linux, Bash<br>
                 Model monitoring, optimization, quantization, inference acceleration
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Research Methods</h4>
+
+              <p class="timeline-text">
+                Multilingual and reasoning-model evaluation, benchmark construction, controlled within-model
+                comparison, cost&ndash;accuracy analysis
               </p>
 
             </li>
@@ -746,14 +762,29 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Dr. Behrooz Nasihatkon</h4>
+              <h4 class="h4 timeline-item-title">Dr. Nava Eslami</h4>
 
               <p class="timeline-text">
-                Assistant Professor, Computer Science, K. N. Toosi University of Technology; CEO at Rahbin Sanat
-                Nasir<br>
-                <a href="mailto:nasihatkon@kntu.ac.ir" style="color: var(--ai-accent-color);">nasihatkon@kntu.ac.ir</a>
-                &middot;
-                <a href="https://www.linkedin.com/in/behrooz-nasihatkon-37835743/" target="_blank"
+                Researcher, AI Research Center, Sharif University of Technology; Lecturer, Islamic Azad
+                University<br>
+                <a href="mailto:nava_eslami_157@iau.ac.ir"
+                  style="color: var(--ai-accent-color);">nava_eslami_157@iau.ac.ir</a> &middot;
+                <a href="https://www.linkedin.com/in/nava-eslami-914a0074/" target="_blank"
+                  style="color: var(--ai-accent-color);">LinkedIn</a>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Dr. Farhad Goodarzy</h4>
+
+              <p class="timeline-text">
+                Senior Researcher, University of Melbourne, Australia; Senior AI Research Scientist, WEHI (Walter and
+                Eliza Hall Institute of Medical Research)<br>
+                <a href="mailto:goodarzy@unimelb.edu.au"
+                  style="color: var(--ai-accent-color);">goodarzy@unimelb.edu.au</a> &middot;
+                <a href="https://www.linkedin.com/in/farhadgoodarzy/" target="_blank"
                   style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
@@ -772,14 +803,14 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Dr. Farhad Goodarzy</h4>
+              <h4 class="h4 timeline-item-title">Dr. Behrooz Nasihatkon</h4>
 
               <p class="timeline-text">
-                Senior Researcher, University of Melbourne; Senior AI Research Scientist, WEHI (Walter and Eliza Hall
-                Institute of Medical Research)<br>
-                <a href="mailto:goodarzy@unimelb.edu.au"
-                  style="color: var(--ai-accent-color);">goodarzy@unimelb.edu.au</a> &middot;
-                <a href="https://www.linkedin.com/in/farhadgoodarzy/" target="_blank"
+                Assistant Professor, Computer Science Department, K. N. Toosi University of Technology; CEO, Rahbin
+                Sanat Nasir<br>
+                <a href="mailto:nasihatkon@kntu.ac.ir" style="color: var(--ai-accent-color);">nasihatkon@kntu.ac.ir</a>
+                &middot;
+                <a href="https://www.linkedin.com/in/behrooz-nasihatkon-37835743/" target="_blank"
                   style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 
@@ -790,25 +821,10 @@
               <h4 class="h4 timeline-item-title">Dr. Andishe Partovi</h4>
 
               <p class="timeline-text">
-                AI/ML Specialist at Google Cloud; Cofounder of Veris AI<br>
+                AI/ML Specialist, Google Cloud; Cofounder, Veris AI<br>
                 <a href="mailto:andipartovi@google.com"
                   style="color: var(--ai-accent-color);">andipartovi@google.com</a> &middot;
                 <a href="https://www.linkedin.com/in/andi-partovi/" target="_blank"
-                  style="color: var(--ai-accent-color);">LinkedIn</a>
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
-              <h4 class="h4 timeline-item-title">Dr. Nava Eslami</h4>
-
-              <p class="timeline-text">
-                Researcher at Sharif University of Technology&rsquo;s AI research center; Lecturer at Islamic Azad
-                University<br>
-                <a href="mailto:nava_eslami_157@iau.ac.ir"
-                  style="color: var(--ai-accent-color);">nava_eslami_157@iau.ac.ir</a> &middot;
-                <a href="https://www.linkedin.com/in/nava-eslami-914a0074/" target="_blank"
                   style="color: var(--ai-accent-color);">LinkedIn</a>
               </p>
 

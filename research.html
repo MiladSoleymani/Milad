@@ -145,7 +145,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+            <a href="https://scholar.google.com/citations?user=PUq5PtEAAAAJ&hl=en" class="social-link">
               <ion-icon name="school-outline"></ion-icon>
             </a>
           </li>
@@ -235,11 +235,12 @@
               <span>May 2026 — Present · with Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                A model asked to think in Persian usually thinks in English instead. Across seven open 8B models I found
-                that whether it complies is decided by architecture, not by the prompt: the one model with a dedicated
-                reasoning channel refused Persian chain-of-thought almost entirely (4% compliance), while every
-                inline-CoT model complied 68–85% of the time. Ablating that channel on identical weights raised
-                compliance twenty-fold at no cost in accuracy — which means a model can look robust to non-English
+                A model asked to think in Persian usually thinks in English instead. I found that whether it complies
+                is decided by architecture, not by the prompt: on 210 paired MathMist problems, a model with a
+                dedicated reasoning channel produced Persian chain-of-thought in only 4% of cases, against 80–85% for
+                inline-CoT models, and disabling that thinking channel flipped the same weights to 84% (paired
+                McNemar). The result also exposes a measurement hazard for cross-lingual evaluation: English accuracy
+                falls 91% → 33% as Persian-CoT compliance rises — which means a model can look robust to non-English
                 reasoning while having never reasoned in it at all.
                 <br><br>
                 I built the evaluation harness behind the result (vLLM and API inference, sentence-level language
@@ -247,7 +248,7 @@
                 time: how the language of the chain-of-thought shapes GRPO training dynamics under verifiable rewards,
                 tracking rollout language ratio and switch rate through training rather than final accuracy alone.
                 <br><br>
-                <em>Manuscript under review, 2026. Code available on request.</em>
+                <em>Manuscript in preparation, 2026. Code available on request.</em>
               </p>
 
             </li>
@@ -280,8 +281,9 @@
                 I aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder using
                 CLIP-style contrastive training, so motor tasks are decoded from natural-language descriptions rather
                 than bare labels — a step toward zero-shot decoding of commands the model has never seen. Alongside it I
-                built LoRA adapters for per-subject calibration (rank 8, 1.5% of parameters trainable), aimed at the
-                cross-subject variability that keeps BCIs in the lab.
+                built LoRA adapters for per-subject calibration (rank 8, ~1% of parameters), aimed at the
+                cross-subject variability that keeps BCIs in the lab. Reinforcement-learning fine-tuning is underway,
+                with the purpose of reliable cross-subject decoding from minimal calibration data.
                 <br><br>
                 <a href="https://github.com/MiladSoleymani/EEG-Clip" target="_blank" class="contact-link">EEG-CLIP
                   code</a>

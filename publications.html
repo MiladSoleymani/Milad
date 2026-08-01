@@ -144,7 +144,7 @@
           </li>
 
           <li class="social-item">
-            <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" class="social-link">
+            <a href="https://scholar.google.com/citations?user=PUq5PtEAAAAJ&hl=en" class="social-link">
               <ion-icon name="school-outline"></ion-icon>
             </a>
           </li>
@@ -218,35 +218,6 @@
 
             <li class="timeline-item">
 
-              <h4 class="h4 timeline-item-title">Reasoning in Persian Is Optional: A Compliance Axis for
-                Target-Language Chain-of-Thought in 8B Models</h4>
-
-              <span>2026</span>
-
-              <p class="timeline-text">
-                <strong>Milad Soleymani</strong>, Kimia Hoseyni, Soroush Ziaee, Nava Eslami<br>
-                <em>Manuscript under review</em><br>
-
-                <br>
-
-                Asked to reason in Persian, most open models reason in English instead. Across seven open 8B models we
-                show that compliance is decided by architecture rather than by the prompt: the single model with a
-                dedicated reasoning channel produced Persian chain-of-thought in only 4% of cases, while every
-                inline-CoT model complied 68&ndash;85% of the time. Ablating that channel on identical weights raised
-                compliance twenty-fold at no cost in task accuracy, showing that a model can appear robust to
-                non-English reasoning while never having reasoned in it. We release the evaluation harness (vLLM and API
-                inference, sentence-level language identification, paired significance tests) and extend the finding to
-                training time with GRPO on Llama-3.1/3.2.<br>
-
-                <a href="https://drive.google.com/file/d/1uTyC0aJyD-4KIEe7iu3iRADGBWc1Ov6_/view?usp=sharing"
-                  target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
-
-              </p>
-
-            </li>
-
-            <li class="timeline-item">
-
               <h4 class="h4 timeline-item-title">An Efficient Swin Transformer Architecture for Cutaneous Melanoma
                 Detection</h4>
 
@@ -269,6 +240,53 @@
                 deployment without giving up clinical-grade accuracy.<br>
 
                 <a href="https://drive.google.com/file/d/1hXl8yPooo4ErI5sYlfwMacormP2lWXfm/view?usp=sharing"
+                  target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
+
+              </p>
+
+            </li>
+
+          </ol>
+
+        </section>
+
+        <!-- In preparation -->
+        <section class="timeline">
+
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="create-outline"></ion-icon>
+            </div>
+
+            <h3 class="h3">In Preparation</h3>
+          </div>
+
+          <ol class="timeline-list">
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Reasoning in Persian Is Optional: A Compliance Axis for
+                Target-Language Chain-of-Thought in 8B Models</h4>
+
+              <span>2026</span>
+
+              <p class="timeline-text">
+                <strong>Milad Soleymani</strong>, Kimia Hoseyni, Soroush Ziaee, Nava Eslami<br>
+                <em>Manuscript in preparation</em><br>
+
+                <br>
+
+                Asked to reason in Persian, most open models reason in English instead. We show that compliance is
+                decided by architecture rather than by the prompt: on 210 paired MathMist problems, a model with a
+                dedicated reasoning channel produced Persian chain-of-thought in only 4% of cases, against
+                80&ndash;85% for inline-CoT models, and disabling that thinking channel flipped the same weights to
+                84% (paired McNemar). The result also exposes a measurement hazard for cross-lingual evaluation:
+                English accuracy falls 91% &rarr; 33% as Persian-CoT compliance rises, so an apparently robust model
+                may never have reasoned in Persian at all. We release the evaluation harness (vLLM and API inference,
+                sentence-level language identification, paired significance tests) and extend the finding to training
+                time with GRPO on Llama-3.1/3.2.<br>
+
+                <a href="https://drive.google.com/file/d/1uTyC0aJyD-4KIEe7iu3iRADGBWc1Ov6_/view?usp=sharing"
                   target="_blank" style="color: var(--ai-accent-color); text-decoration: none;">[Manuscript]</a>
 
               </p>
