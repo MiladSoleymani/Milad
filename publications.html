@@ -266,6 +266,34 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">The Chain-of-Thought Instruction as a Lever on Language Drift:
+                Persian&ndash;English GRPO Dynamics under a Language-Blind Reward</h4>
+
+              <span>2026</span>
+
+              <p class="timeline-text">
+                <strong>Milad Soleymani</strong>, Kimia Hoseyni, Soroush Ziaee, Nava Eslami<br>
+                <em>Manuscript in preparation</em><br>
+
+                <br>
+
+                An instruction that appears inert at inference can still decide where training ends up. We show that
+                asking a model to reason in the target language shifts the Persian&ndash;English language gap by only
+                2.9 points at inference, but becomes decisive once the model is trained: under 300 GRPO steps of a
+                reward that is blind to language, the same instruction widens that gap to 65&ndash;99 points. Tracking
+                rollout language ratio and switch rate through training, rather than final accuracy alone, shows the
+                drift accumulating over the course of optimisation on Llama-3.1/3.2.<br>
+
+                <br>
+
+                <em>Results complete, manuscript drafted, available upon request.</em>
+
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Reasoning in Persian Is Optional: A Compliance Axis for
                 Target-Language Chain-of-Thought in 8B Models</h4>
 
@@ -284,8 +312,7 @@
                 84% (paired McNemar). The result also exposes a measurement hazard for cross-lingual evaluation:
                 English accuracy falls 91% &rarr; 33% as Persian-CoT compliance rises, so an apparently robust model
                 may never have reasoned in Persian at all. We release the evaluation harness (vLLM and API inference,
-                sentence-level language identification, paired significance tests) and extend the finding to training
-                time with GRPO on Llama-3.1/3.2.<br>
+                sentence-level language identification, paired significance tests).<br>
 
                 <br>
 

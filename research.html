@@ -234,11 +234,13 @@
                 reasoning while having never reasoned in it at all.
                 <br><br>
                 I built the evaluation harness behind the result (vLLM and API inference, sentence-level language
-                identification, paired significance tests), and I am now extending it from inference time to training
-                time: how the language of the chain-of-thought shapes GRPO training dynamics under verifiable rewards,
-                tracking rollout language ratio and switch rate through training rather than final accuracy alone.
+                identification, paired significance tests), and carried it from inference time to training time. The
+                same instruction turns out to behave differently on each side: near-inert at inference, where it moves
+                the language gap by 2.9 points, but decisive under reinforcement learning, where that gap widens to
+                65&ndash;99 points over 300 GRPO steps of a language-blind reward. A prompt that looks like it does
+                nothing can still steer where training ends up.
                 <br><br>
-                <em>Manuscript in preparation, 2026. Code available on request.</em>
+                <em>Two manuscripts in preparation, 2026. Code available on request.</em>
               </p>
 
             </li>
@@ -264,7 +266,7 @@
 
               <h4 class="h4 timeline-item-title">Language-aligned and parameter-efficient decoding</h4>
 
-              <span>Oct 2025 — May 2026 · with Dr. Nava Eslami</span>
+              <span>Oct 2025 — Present · with Dr. Nava Eslami</span>
 
               <p class="timeline-text">
                 A brain–computer interface trained on fixed class labels can only ever decode the classes it was shown.
@@ -325,7 +327,7 @@
 
               <h4 class="h4 timeline-item-title">PEFT for low-resource vision and language models</h4>
 
-              <span>Jan 2025 — Present · with Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
+              <span>Jan 2025 — May 2026 · with Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
 
               <p class="timeline-text">
                 Medical tasks rarely come with enough labelled data to fine-tune a large pretrained model end to end. I

@@ -280,11 +280,13 @@
                 210 paired MathMist problems a reasoning-channel model complied at 4% against 80&ndash;85% for
                 inline-CoT models, and disabling its thinking channel flipped the same weights to 84% (paired
                 McNemar)<br>
-                &bull; Identified a measurement hazard for cross-lingual evaluation: English accuracy falls 91%
-                &rarr; 33% as Persian-CoT compliance rises, so an apparently robust model may never have reasoned in
-                Persian at all<br>
-                &bull; Built the evaluation harness (vLLM and API inference, sentence-level language ID, paired
-                significance tests), extending the result to training time with GRPO on Llama-3.1/3.2
+                &bull; Showed the chain-of-thought instruction to be near-inert at inference (a 2.9-point language
+                gap) yet decisive under RL, widening to 65&ndash;99 points over 300 GRPO steps of a language-blind
+                reward. Also identified a measurement hazard for cross-lingual evaluation: English accuracy falls 91%
+                &rarr; 33% as Persian-CoT compliance rises, so a model scoring as robust may never have reasoned in
+                Persian<br>
+                &bull; Built the evaluation harness behind both results (vLLM and API inference, sentence-level
+                language ID, paired significance tests, rollout language tracking through GRPO training)
               </p>
 
             </li>
@@ -294,7 +296,7 @@
               <h4 class="h4 timeline-item-title">Language-Aligned and Parameter-Efficient Representation Learning for
                 Brain Signals</h4>
 
-              <span>Oct 2025 &mdash; May 2026 &middot; Supervisor: Dr. Nava Eslami</span>
+              <span>Oct 2025 &mdash; Present &middot; Supervisor: Dr. Nava Eslami</span>
 
               <p class="timeline-text">
                 &bull; Aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder
@@ -313,7 +315,7 @@
               <h4 class="h4 timeline-item-title">Parameter-Efficient Fine-Tuning (PEFT) for Low-Resource Adaptation of
                 Large Vision and Language Models</h4>
 
-              <span>Jan 2025 &mdash; Present &middot; Supervisors: Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
+              <span>Jan 2025 &mdash; May 2026 &middot; Supervisors: Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
 
               <p class="timeline-text">
                 &bull; Adapted large pretrained vision models (Swin, ViT) to specialist medical tasks by training a
