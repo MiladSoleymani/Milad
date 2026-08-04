@@ -277,12 +277,15 @@
 
                 <br>
 
-                An instruction that appears inert at inference can still decide where training ends up. We show that
-                asking a model to reason in the target language shifts the Persian&ndash;English language gap by only
-                2.9 points at inference, but becomes decisive once the model is trained: under 300 GRPO steps of a
-                reward that is blind to language, the same instruction widens that gap to 65&ndash;99 points. Tracking
-                rollout language ratio and switch rate through training, rather than final accuracy alone, shows the
-                drift accumulating over the course of optimisation on Llama-3.1/3.2.<br>
+                An instruction that appears inert at inference can still decide where training ends up. Holding the
+                reward strictly blind to language and the input problems fixed, we vary only the language the
+                chain-of-thought instruction asks for. Before training the manipulation barely registers: asking
+                Llama-3.1-8B-Instruct to reason in Persian rather than English moves the Persian share of its reasoning
+                by 2.9 points. After 300 Dr. GRPO steps on 250 Persian grade-school math problems, under a reward that
+                never sees language, the same two instructions have pulled the policy 65 to 99 points apart, an
+                amplification of roughly 22 to 34&times;. We further show that the character-share metrics used in prior
+                work certify as clean a run in which 96.7% of rollouts carry foreign-script intrusions, and propose a
+                rollout-level incidence metric that separates drift from degeneration.<br>
 
                 <br>
 
