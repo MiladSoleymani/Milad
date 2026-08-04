@@ -219,28 +219,57 @@
 
             <li class="timeline-item">
 
+              <h4 class="h4 timeline-item-title">The chain-of-thought instruction as a lever on language drift</h4>
+
+              <span>May 2026 — Present · with Dr. Nava Eslami</span>
+
+              <p class="timeline-text">
+                Reinforcement learning is known to pull non-English reasoning toward English, but the effect has only
+                been observed passively, with the reward doing the work. I asked the complementary question: hold the
+                reward strictly blind to language, hold the problems fixed, and see how much the instruction alone
+                decides. I trained Llama-3.1-8B-Instruct with Dr. GRPO for 300 steps on 250 Persian grade-school math
+                problems, varying only the language the system prompt asks the model to think in.
+                <br><br>
+                Before training the manipulation barely exists. Told to reason in English about a Persian problem, the
+                model reasons in Persian anyway — 0.762, against 0.791 when asked for Persian, a gap of 0.029. After
+                300 steps of a reward that never sees language, the same two instructions have pulled the policy to
+                opposite ends of the language axis, separating by 0.650 to 0.992. An amplification of roughly 22 to
+                34×: RL does not merely permit language drift, it turns a prompt difference that is nearly invisible at
+                inference into a decisive one.
+                <br><br>
+                Measuring that carefully produced two further results. The character-share metrics prior work relies on
+                certify my Persian arm as clean at 0.853 Perso-Arabic share, while 96.7% of its rollouts in fact carry
+                foreign-script intrusions — so I propose a rollout-level incidence metric that tells drift apart from
+                degeneration. And two byte-identical runs, same seed, diverge from the first step, because vLLM's
+                sampling is not pinned by the training seed. Directions replicate, magnitudes do not, which weakens
+                every single-seed claim in this area — including several of my own, which the paper retracts.
+                <br><br>
+                <em>Manuscript in preparation, 2026. Code, configurations, per-step logs, and rollout dumps released
+                  with the preprint.</em>
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
               <h4 class="h4 timeline-item-title">Reasoning in Persian is optional: a compliance axis for
                 target-language chain-of-thought</h4>
 
               <span>May 2026 — Present · with Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                A model asked to think in Persian usually thinks in English instead. I found that whether it complies
-                is decided by architecture, not by the prompt: on 210 paired MathMist problems, a model with a
-                dedicated reasoning channel produced Persian chain-of-thought in only 4% of cases, against 80–85% for
-                inline-CoT models, and disabling that thinking channel flipped the same weights to 84% (paired
-                McNemar). The result also exposes a measurement hazard for cross-lingual evaluation: English accuracy
-                falls 91% → 33% as Persian-CoT compliance rises — which means a model can look robust to non-English
-                reasoning while having never reasoned in it at all.
+                The inference-time half of the same question. A model asked to think in Persian usually thinks in
+                English instead. I found that whether it complies is decided by architecture, not by the prompt: on 210
+                paired MathMist problems, a model with a dedicated reasoning channel produced Persian chain-of-thought
+                in only 4% of cases, against 80–85% for inline-CoT models, and disabling that thinking channel flipped
+                the same weights to 84% (paired McNemar). The result also exposes a measurement hazard for cross-lingual
+                evaluation: English accuracy falls 91% → 33% as Persian-CoT compliance rises — which means a model can
+                look robust to non-English reasoning while having never reasoned in it at all.
                 <br><br>
-                I built the evaluation harness behind the result (vLLM and API inference, sentence-level language
-                identification, paired significance tests), and carried it from inference time to training time. The
-                same instruction turns out to behave differently on each side: near-inert at inference, where it moves
-                the language gap by 2.9 points, but decisive under reinforcement learning, where that gap widens to
-                65&ndash;99 points over 300 GRPO steps of a language-blind reward. A prompt that looks like it does
-                nothing can still steer where training ends up.
+                I built the evaluation harness behind both papers: vLLM and API inference, sentence-level language
+                identification, paired significance tests, and rollout language tracking through training.
                 <br><br>
-                <em>Two manuscripts in preparation, 2026. Code available on request.</em>
+                <em>Manuscript in preparation, 2026. Code available on request.</em>
               </p>
 
             </li>
