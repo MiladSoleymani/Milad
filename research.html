@@ -227,7 +227,7 @@
                 Reinforcement learning is known to pull non-English reasoning toward English, but always with the
                 reward doing the work. I held the reward strictly blind to language and varied only the instruction:
                 Llama-3.1-8B-Instruct, Dr. GRPO, 300 steps, 250 Persian grade-school math problems, everything else
-                identical across arms. Before training the instruction barely matters — told to reason in English about
+                identical across arms. Before training the instruction barely matters: told to reason in English about
                 a Persian problem, the model reasons in Persian anyway (0.762, against 0.791 when asked for Persian).
                 After 300 steps the same two instructions separate the policy by 0.650 to 0.992, an amplification of
                 roughly 22 to 34×.
@@ -254,8 +254,8 @@
                 paired MathMist problems, a model with a dedicated reasoning channel produced Persian chain-of-thought
                 in only 4% of cases, against 80–85% for inline-CoT models, and disabling that thinking channel flipped
                 the same weights to 84% (paired McNemar). The result also exposes a measurement hazard for cross-lingual
-                evaluation: English accuracy falls 91% → 33% as Persian-CoT compliance rises — which means a model can
-                look robust to non-English reasoning while having never reasoned in it at all.
+                evaluation: English accuracy falls 91% → 33% as Persian-CoT compliance rises, which means a model can
+                look robust to non-English reasoning while never having reasoned in it at all.
                 <br><br>
                 I built the evaluation harness behind both papers: vLLM and API inference, sentence-level language
                 identification, paired significance tests, and rollout language tracking through training.
@@ -292,7 +292,7 @@
                 A brain–computer interface trained on fixed class labels can only ever decode the classes it was shown.
                 I aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder using
                 CLIP-style contrastive training, so motor tasks are decoded from natural-language descriptions rather
-                than bare labels — a step toward zero-shot decoding of commands the model has never seen. Alongside it I
+                than bare labels, a step toward zero-shot decoding of commands the model has never seen. Alongside it I
                 built LoRA adapters for per-subject calibration (rank 8, ~1% of parameters), aimed at the
                 cross-subject variability that keeps BCIs in the lab. Reinforcement-learning fine-tuning is underway,
                 with the purpose of reliable cross-subject decoding from minimal calibration data.
@@ -314,8 +314,8 @@
                 across several public EEG datasets, learning embeddings that transfer across tasks, together with the
                 benchmarking and time–frequency signal processing underneath. As a data scientist at KeyLead Health I
                 contributed to two EEG projects that became peer-reviewed publications (Partovi et al., IEEE NER 2023,
-                Journal of Neural Engineering 2025). My own first paper in this line — a deep learning algorithm for
-                classifying grasp motions from multi-session EEG — came out of a 6th-place finish in the 2020
+                Journal of Neural Engineering 2025). My own first paper in this line, a deep learning algorithm for
+                classifying grasp motions from multi-session EEG, came out of a 6th-place finish in the 2020
                 International BCI Competition.
                 <br><br>
                 <a href="https://github.com/MiladSoleymani/baseline_models_eeg" target="_blank"
@@ -352,9 +352,8 @@
               <p class="timeline-text">
                 Medical tasks rarely come with enough labelled data to fine-tune a large pretrained model end to end. I
                 adapt large vision models (Swin, ViT) to specialist medical tasks by training a small subset of their
-                parameters, cutting the compute needed to reach task performance. The concrete result is an efficient
-                Swin Transformer architecture for cutaneous melanoma detection, submitted to <em>Biomedical Signal
-                  Processing and Control</em>.
+                parameters. This cuts the compute needed to reach task performance. The concrete result is an efficient
+                Swin Transformer architecture for cutaneous melanoma detection, now under review.
                 <br><br>
                 <em>Manuscript available upon request.</em>
               </p>
@@ -365,7 +364,7 @@
 
         </section>
 
-        <!-- Thread 4 -->
+        <!-- Thread 4: Empathic and Affective Language Models (hidden)
         <section class="timeline">
 
           <div class="title-wrapper">
@@ -416,6 +415,7 @@
           </ol>
 
         </section>
+        -->
 
         <!-- Applied work -->
         <section class="timeline">
@@ -441,7 +441,7 @@
                 tool-grounded retrieval in place of unconstrained generation, an event-driven market-intelligence
                 pipeline (embedding, deduplication, online clustering over a vector database) with a multi-agent
                 analyst, and the evaluation harness that picks the prompts and models from measured accuracy and cost
-                rather than intuition. Earlier: generative pipelines for high-resolution industrial image synthesis
+                rather than intuition. Earlier: generative pipelines for high-resolution industrial image generation
                 (diffusion, VAE, ControlNet) at RUTILEA, and human motion modelling from video at ATHLX.
               </p>
 
