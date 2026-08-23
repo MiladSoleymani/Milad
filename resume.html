@@ -299,11 +299,10 @@
               <span>Oct 2025 &mdash; Present &middot; Supervisor: Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                &bull; Aligned an ATCNet brain-signal encoder with a frozen sentence-transformer text encoder
-                (CLIP-style contrastive training), decoding motor tasks from natural-language descriptions rather than
-                bare labels, toward zero-shot decoding of unseen commands<br>
-                &bull; Adapted that embedding to new subjects with parameter-efficient LoRA (rank 8, ~1% of
-                parameters), targeting the cross-subject variability that limits BCI deployment<br>
+                &bull; Trained a shared EEG/text embedding by aligning an ATCNet encoder with a frozen
+                sentence-transformer (CLIP-style contrastive). The model decodes motor tasks from language
+                descriptions rather than bare labels<br>
+                &bull; Adapted that embedding to new subjects with parameter-efficient fine-tuning techniques<br>
                 &bull; Reinforcement-learning fine-tuning is underway, with the purpose of reliable cross-subject
                 decoding from minimal calibration data
               </p>
@@ -318,9 +317,12 @@
               <span>Jan 2025 &mdash; May 2026 &middot; Supervisors: Dr. Maliheh Sabeti, Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                &bull; Adapted large pretrained vision transformers (Swin, ViT) to specialist medical tasks by training a
-                small subset of parameters, cutting the compute needed to reach task performance<br>
-                &bull; Designed an efficient Swin Transformer for cutaneous melanoma detection, now under review
+                &bull; Adapted large pretrained vision transformers (Swin, ViT) to specialist medical tasks with
+                parameter-efficient adapters and LoRA<br>
+                &bull; Trained parallel bottleneck adapters on a frozen Swin backbone at 1&ndash;8% of model
+                parameters, at accuracy statistically indistinguishable from full fine-tuning, for clinical use on
+                resource-constrained hardware<br>
+                &bull; The resulting efficient Swin architecture for cutaneous melanoma detection is under review
                 (see <a href="publications.html" style="color: var(--ai-accent-color);">publications</a>)
               </p>
 
@@ -387,7 +389,7 @@
               <span>Oct 2025 &mdash; Present</span>
 
               <p class="timeline-text">
-                <a href="https://qubitorbit.com/" target="_blank" style="color: var(--ai-accent-color);">QubitOrbit</a>, Dubai, UAE / Tehran, Iran<br>
+                <a href="https://qubitorbit.com/" target="_blank" style="color: var(--ai-accent-color);">QubitOrbit</a>, UAE / Tehran, Iran<br>
                 &bull; Built typed LLM agents with tool-grounded retrieval and clarification loops in place of
                 unconstrained generation, parsing domain shorthand into structured records<br>
                 &bull; Led an event-driven market-intelligence pipeline &mdash; filtering, embedding, deduplication and
@@ -452,7 +454,7 @@
 
               <p class="timeline-text">
                 KeyLead Health, Australia / Tehran, Iran<br>
-                &bull; Built EEG decoding and voice-based phenotyping models (see Research: EEG classification,
+                &bull; Built EEG decoding and voice-based phenotyping models (see Research: EEG decoding,
                 chronic heart failure phenotyping)
               </p>
 
@@ -600,8 +602,18 @@
               <h4 class="h4 timeline-item-title">Programming</h4>
 
               <p class="timeline-text">
-                Python (expert) &middot; PyTorch, HuggingFace Transformers, NumPy/SciPy/scikit-learn (advanced)
-                &middot; Git, Linux, Docker, LaTeX (working)
+                Python (expert) &middot; NumPy/SciPy/pandas (advanced) &middot; Git, Linux, Docker, LaTeX (working)
+              </p>
+
+            </li>
+
+            <li class="timeline-item">
+
+              <h4 class="h4 timeline-item-title">Frameworks and Libraries</h4>
+
+              <p class="timeline-text">
+                PyTorch, TensorFlow/Keras, JAX/Flax, scikit-learn, HuggingFace (Transformers, PEFT, Datasets,
+                Accelerate), PyTorch Lightning, vLLM, XGBoost/LightGBM, OpenCV
               </p>
 
             </li>
@@ -611,9 +623,11 @@
               <h4 class="h4 timeline-item-title">Machine Learning</h4>
 
               <p class="timeline-text">
-                Parameter-efficient fine-tuning (LoRA, adapters), reinforcement learning from feedback (RLHF, GRPO)<br>
-                Contrastive and self-supervised representation learning, generative modeling (diffusion, VAE), vision
-                and sequence transformers
+                Supervised and unsupervised learning, deep architectures (CNNs, transformers, RNNs, GNNs, diffusion
+                models), representation learning (contrastive, self-supervised)<br>
+                Transfer learning and domain adaptation, parameter-efficient fine-tuning, reinforcement learning (PPO,
+                DPO, GRPO, RLHF), Bayesian and probabilistic modeling, optimization, interpretability and
+                explainability
               </p>
 
             </li>
