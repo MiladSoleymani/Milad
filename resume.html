@@ -276,15 +276,21 @@
               <span>May 2026 &mdash; Present &middot; Supervisor: Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                &bull; Demonstrated that architecture, not prompting, sets whether an 8B model reasons in Persian: on
-                210 paired MathMist problems a reasoning-channel model complied at 4% against 80&ndash;85% for
-                inline-CoT models, and disabling its thinking channel flipped the same weights to 84% (paired
-                McNemar)<br>
-                &bull; Showed the chain-of-thought instruction to be near-inert at inference (a 2.9-point language
-                gap) yet decisive under RL, widening to 65&ndash;99 points over 300 GRPO steps of a language-blind
-                reward. Also identified a measurement hazard for cross-lingual evaluation: English accuracy falls 91%
-                &rarr; 33% as Persian-CoT compliance rises, so a model scoring as robust may never have reasoned in
-                Persian<br>
+                &bull; Demonstrated that a model's RL-trained thinking mode, not the prompt, sets whether an 8B
+                model reasons in Persian: across seven open configurations on 210 paired MathMist problems, one
+                refused at 4% Persian-CoT while six complied at 68&ndash;85% under an identical instruction;
+                disabling the thinking mode flipped the same weights from 4% to 84% at zero paired accuracy cost
+                (McNemar p = 1.0)<br>
+                &bull; Showed compliance carries no information about accuracy &mdash; the most accurate
+                configuration (91% English) is the one that refuses &mdash; so a model scoring as robust may never
+                have reasoned in Persian; cross-lingual evaluations must report compliance alongside the gap<br>
+                &bull; Showed the same instruction is near-inert before training (a 2.9-point language gap) yet
+                decisive under RL: 300 Dr. GRPO steps on Llama-3.1-8B under a language-blind reward separated the two
+                Persian conditions by 65&ndash;99 points<br>
+                &bull; Found that the character-share language metrics used in prior work certify as clean a run in
+                which 96.7% of rollouts carry foreign-script intrusions; introduced a rollout-level incidence metric,
+                and documented that byte-identical GRPO configurations diverge under unpinned vLLM sampling
+                (&plusmn;0.09 accuracy, p = 0.004)<br>
                 &bull; Built the evaluation harness behind both results (vLLM and API inference, sentence-level
                 language ID, paired significance tests, rollout language tracking through GRPO training)
               </p>

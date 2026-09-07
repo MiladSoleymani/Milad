@@ -249,12 +249,14 @@
               <span>May 2026 — Present · with Dr. Nava Eslami</span>
 
               <p class="timeline-text">
-                The inference-time half of the same question. A model asked to think in Persian usually thinks in
-                English instead. I found that whether it complies is decided by architecture, not by the prompt: on 210
-                paired MathMist problems, a model with a dedicated reasoning channel produced Persian chain-of-thought
-                in only 4% of cases, against 80–85% for inline-CoT models, and disabling that thinking channel flipped
-                the same weights to 84% (paired McNemar). The result also exposes a measurement hazard for cross-lingual
-                evaluation: English accuracy falls 91% → 33% as Persian-CoT compliance rises, which means a model can
+                The inference-time half of the same question. A model asked to think in Persian often thinks in
+                English instead. I found that whether it complies is decided by the model's RL-trained thinking mode,
+                not by the prompt and not by how the reasoning is served: across seven open 8B configurations on 210
+                paired MathMist problems, one refused under an identical Persian instruction, producing Persian
+                chain-of-thought in 4% of cases, while the other six complied at 68–85% — including a second reasoning
+                model with its thinking mode left on. Disabling the thinking mode flipped the same weights from 4% to
+                84% at zero paired accuracy cost (McNemar p = 1.0). Compliance turns out to carry no information about
+                accuracy: the most accurate configuration in the set is the one that refuses, which means a model can
                 look robust to non-English reasoning while never having reasoned in it at all.
                 <br><br>
                 I built the evaluation harness behind both papers: vLLM and API inference, sentence-level language
