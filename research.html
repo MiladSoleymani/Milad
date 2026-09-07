@@ -252,12 +252,12 @@
                 The inference-time half of the same question. A model asked to think in Persian often thinks in
                 English instead. I found that whether it complies is decided by the model's RL-trained thinking mode,
                 not by the prompt and not by how the reasoning is served: across seven open 8B configurations on 210
-                paired MathMist problems, one refused under an identical Persian instruction, producing Persian
-                chain-of-thought in 4% of cases, while the other six complied at 68–85% — including a second reasoning
-                model with its thinking mode left on. Disabling the thinking mode flipped the same weights from 4% to
-                84% at zero paired accuracy cost (McNemar p = 1.0). Compliance turns out to carry no information about
-                accuracy: the most accurate configuration in the set is the one that refuses, which means a model can
-                look robust to non-English reasoning while never having reasoned in it at all.
+                paired MathMist problems, one refused under an identical Persian instruction and produced Persian
+                chain-of-thought in 4% of cases, while the other six complied at 68–85%, among them a second
+                reasoning model with its thinking mode left on. Disabling the thinking mode flipped the same weights
+                from 4% to 84% with no loss in paired accuracy (McNemar p = 1.0). Compliance carries no information
+                about accuracy: the most accurate configuration in the set is the one that refuses, which means a
+                model can look robust to non-English reasoning while never having reasoned in it at all.
                 <br><br>
                 I built the evaluation harness behind both papers: vLLM and API inference, sentence-level language
                 identification, paired significance tests, and rollout language tracking through training.
@@ -387,9 +387,9 @@
 
               <p class="timeline-text">
                 Empathy is easy to ask a model for and hard to reward it for. I fine-tuned language models with Group
-                Relative Policy Optimization against composite reward functions — a semantic-similarity term for staying
-                on topic, and a fine-tuned RoBERTa empathy model as the reward signal itself — for patient-aligned
-                generation in healthcare, alongside retrieval-augmented pipelines for medical domain tasks.
+                Relative Policy Optimization for patient-aligned generation in healthcare. The reward was composite: a
+                semantic-similarity term for staying on topic, and a fine-tuned RoBERTa empathy model as the reward
+                signal itself. I also built retrieval-augmented pipelines for medical domain tasks.
                 <br><br>
                 <a href="https://github.com/MiladSoleymani/GRPO-EMPATHY" target="_blank" class="contact-link">GRPO-Empathy
                   code</a>
